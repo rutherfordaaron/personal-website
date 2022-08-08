@@ -55,7 +55,7 @@ const About = () => {
         whileInView="show"
         exit="hide"
       >
-        I'm a self-taught web designer located in Portland, Oregon, currently looking for a junior front-end position. I have a loving spouse, Harmony, and an adorable kitty, Lucy. I spend the majority of my time programming and learning new tools for programming. I spend the rest of my time playing games (ttrpg, board, and video), writing, and exploring the coast.
+        I'm a self-taught web designer located in Portland, Oregon, currently looking for a junior front-end position. I have a loving spouse, Harmony, and an adorable kitty, Lucy. I spend the majority of my time programming. The rest of my time, I spend playing games (ttrpg, board, and video), writing, and exploring the coast.
       </motion.p>
 
       <h3><em>My Journey</em></h3>
