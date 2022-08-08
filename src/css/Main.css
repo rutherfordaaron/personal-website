@@ -14,24 +14,51 @@ h1 {
   margin: 0;
 }
 
+.center,
+h2 {
+  text-align: center;
+}
+
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header {
-  min-height: 100vh;
-  padding-left: 30px;
+.column {
   flex-direction: column;
 }
 
+.header {
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px dashed #b7e096;
+}
+
+.headshot {
+  width: 300px;
+  height: auto;
+}
+
+
 .headerText {
-  max-width: 500px;
+  width: 300px
 }
 
 @media (min-width: 550px) {
   .header {
     flex-direction: row;
+    padding: 0;
+    padding-left: 30px;
+  }
+
+  .headerText {
+    width: 500px;
+  }
+
+  .headshot {
+    width: initial;
+    height: auto;
   }
 }

@@ -16,7 +16,7 @@ const Main = () => {
       <div className="header flex">
         <div className="headerText">
           <motion.h1
-            initial={{ opacity: 0, x: -500 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ x: 0, opacity: 1 }}
             exit={{ opacity: 0, x: -500 }}
             transition={{ delay: 0.5, duration: 1.5, type: "spring", bounce: 0.35 }}
@@ -24,16 +24,17 @@ const Main = () => {
             Hello, my name is Aaron Rutherford.
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, x: -500 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ x: 0, opacity: 1 }}
             exit={{ opacity: 0, x: -500 }}
             transition={{ delay: 0.6, duration: 1.5, type: "spring", bounce: 0.35 }}
           >
-            A self-taught frontend web developer.
+            I'm a self-taught web developer.
           </motion.p>
         </div>
         <motion.img
-          initial={{ opacity: 0, x: 500 }}
+          className="headshot"
+          initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 500 }}
           transition={{ delay: 0.5, duration: 1.5, type: "spring", bounce: 0.35 }}
