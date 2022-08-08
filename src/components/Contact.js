@@ -2,7 +2,7 @@ import "../css/Contact.css";
 
 const Contact = () => {
   return (
-    <div>
+    <div class="section flex column">
       <h2>Get in Touch</h2>
     </div>
   )

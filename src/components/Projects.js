@@ -47,7 +47,7 @@ const Projects = () => {
   }
 
   return (
-    <div>
+    <div className="section flex column" id="projects">
       <h2>My Projects</h2>
       <motion.div
         className="projectGrid"

@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin: 10px;
+  width: 80%;
+  min-width: 330px;
 }
 
 .project {

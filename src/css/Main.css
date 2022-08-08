@@ -19,6 +19,11 @@ h2 {
   text-align: center;
 }
 
+h2 {
+  font-size: 48px;
+  text-decoration: underline;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -34,6 +39,10 @@ h2 {
   flex-direction: column;
   padding: 10px;
   border-bottom: 1px dashed #b7e096;
+}
+
+.section {
+  min-height: 100vh;
 }
 
 .headshot {
