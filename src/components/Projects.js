@@ -1,5 +1,6 @@
 import "../css/Projects.css";
 import { motion } from "framer-motion";
+import ProjectTile from "./ProjectTile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoneyBill1Wave,
@@ -14,6 +15,7 @@ import {
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = () => {
+
   const projectAnimation = {
     show: {
       opacity: 1,
@@ -47,7 +49,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="section flex column" id="projects">
+    <div className="section flex column projects" id="projects">
       <h2>My Projects</h2>
       <motion.div
         className="projectGrid"
@@ -56,227 +58,66 @@ const Projects = () => {
         whileInView="show"
         exit="hide"
       >
-        <motion.div
-          className="project flex column"
-          variants={projectAnimation}
-        >
-          <p className="projectTitle center">Tip Calculator</p>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://hazipan.github.io/tip-calc/"
-            className="projectLink"
-          >
-            <FontAwesomeIcon className="icon" icon={faMoneyBill1Wave} />
-          </motion.a>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/Hazipan/tip-calc/"
-            className="githubLink"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.button
-            className="infoBtn"
-            type="button"
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-          >
-            <FontAwesomeIcon className="info" icon={faInfoCircle} />
-          </motion.button>
-        </motion.div>
 
-        <motion.div
-          className="project flex column"
-          variants={projectAnimation}
-        >
-          <p className="projectTitle center">Rock, Paper, Scissors</p>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://hazipan.github.io/rock-paper-scissors-lizard-spock/"
-            className="projectLink"
-          >
-            <FontAwesomeIcon className="icon" icon={faHandScissors} />
-          </motion.a>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/Hazipan/rock-paper-scissors-lizard-spock/"
-            className="githubLink"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.button
-            className="infoBtn"
-            type="button"
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-          >
-            <FontAwesomeIcon className="info" icon={faInfoCircle} />
-          </motion.button>
-        </motion.div>
+        <ProjectTile
+          title="Tip Calculator"
+          icon={faMoneyBill1Wave}
+          siteLink="https://hazipan.github.io/tip-calc/"
+          repoLink="https://github.com/Hazipan/tip-calc/"
+          info={
+            <p className="infoText">A simple bill and tip splitting application. This was the first project that I implemented with React. Here, I learned all about class components, state, and component organization.</p>
+          }
+        />
 
-        <motion.div
-          className="project flex column"
-          variants={projectAnimation}
-        >
-          <p className="projectTitle center">Countries API</p>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://hazipan.github.io/countries-project-using-api/"
-            className="projectLink"
-          >
-            <FontAwesomeIcon className="icon" icon={faGlobeAmericas} />
-          </motion.a>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/Hazipan/countries-project-using-api/"
-            className="githubLink"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.button
-            className="infoBtn"
-            type="button"
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-          >
-            <FontAwesomeIcon className="info" icon={faInfoCircle} />
-          </motion.button>
-        </motion.div>
+        <ProjectTile
+          title="Rock, Paper, Scissors"
+          icon={faHandScissors}
+          siteLink="https://hazipan.github.io/rock-paper-scissors-lizard-spock/"
+          repoLink="https://github.com/Hazipan/rock-paper-scissors-lizard-spock/"
+          info={
+            <p className="infoText">A simple rock, paper, scissors, lizard, spock game. This project really tested my CSS abilities and taught me about local storage to store user variables for a better experience.</p>
+          }
+        />
 
-        <motion.div
-          className="project flex column"
-          variants={projectAnimation}
-        >
-          <p className="projectTitle center">Character Web App</p>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://guildsmen-ttrpg.com/resources/characters.html"
-            className="projectLink"
-          >
-            <FontAwesomeIcon className="icon" icon={faDice} />
-          </motion.a>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/Hazipan/guildsmen-character-app/"
-            className="githubLink"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.button
-            className="infoBtn"
-            type="button"
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-          >
-            <FontAwesomeIcon className="info" icon={faInfoCircle} />
-          </motion.button>
-        </motion.div>
+        <ProjectTile
+          title="Countries API"
+          icon={faGlobeAmericas}
+          siteLink="https://hazipan.github.io/countries-project-using-api/"
+          repoLink="https://github.com/Hazipan/countries-project-using-api/"
+          info={
+            <p className="infoText">An API connected project that shows you all the countries of the world. This project taught me about JSON data, the react-router-dom package to create dynamic pages in React, and how to make calls to an API and extract information.</p>
+          }
+        />
 
-        <motion.div
-          className="project flex column"
-          variants={projectAnimation}
-        >
-          <p className="projectTitle center">Todo App</p>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://hazipan.github.io/todo-app/"
-            className="projectLink"
-          >
-            <FontAwesomeIcon className="icon" icon={faClipboardList} />
-          </motion.a>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/Hazipan/todo-app/"
-            className="githubLink"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.button
-            className="infoBtn"
-            type="button"
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-          >
-            <FontAwesomeIcon className="info" icon={faInfoCircle} />
-          </motion.button>
-        </motion.div>
+        <ProjectTile
+          title="Character Web App"
+          icon={faDice}
+          siteLink="https://guildsmen-ttrpg.com/resources/characters.html"
+          repoLink="https://github.com/Hazipan/guildsmen-character-app/"
+          info={
+            <p className="infoText">A personal project for creating and using characters for a ttrpg game that me and my wife created. The entire Guildsmen website was coded by me. This project taught me how to better manage components and how to handle somwhat complex user interactions. This project is still under going some work.</p>
+          }
+        />
 
-        <motion.div
-          className="project flex column"
-          variants={projectAnimation}
-        >
-          <p className="projectTitle center">This Website</p>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/hazipan/personal-website"
-            className="projectLink"
-          >
-            <FontAwesomeIcon className="icon" icon={faLocationDot} />
-          </motion.a>
-          <motion.a
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-            href="https://github.com/Hazipan/personal-website/"
-            className="githubLink"
-          >
-            <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
-          <motion.button
-            className="infoBtn"
-            type="button"
-            variants={linkAnimation}
-            initial="off"
-            whileHover="on"
-            exit="off"
-          >
-            <FontAwesomeIcon className="info" icon={faInfoCircle} />
-          </motion.button>
-        </motion.div>
+        <ProjectTile
+          title="Todo App"
+          icon={faClipboardList}
+          siteLink="https://hazipan.github.io/todo-app/"
+          repoLink="https://github.com/Hazipan/todo-app/"
+          info={
+            <p className="infoText">A simple todo application with drag and drop features. This project taught me a lot about array manipulation, color modes, and introduced me to react-beautiful-dnd (a drag and drop package for react).</p>
+          }
+        />
+
+        <ProjectTile
+          title="This Website"
+          icon={faLocationDot}
+          siteLink="#"
+          repoLink="https://github.com/Hazipan/personal-website/"
+          info={
+            <p className="infoText">This website taught me how to create micro animations using framer-motion, as well as offer a way to showcase my work to potential employers like you!</p>
+          }
+        />
       </motion.div>
     </div >
   )

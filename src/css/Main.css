@@ -8,6 +8,7 @@ body {
   font-size: 24px;
   font-family: 'Patua One', cursive;
   background: linear-gradient(#b7e096, white);
+  max-width: 100vw;
 }
 
 h1 {
@@ -22,6 +23,10 @@ h2 {
 h2 {
   font-size: 48px;
   text-decoration: underline;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .flex {
@@ -48,6 +53,7 @@ h2 {
 .headshot {
   width: 300px;
   height: auto;
+
 }
 
 
