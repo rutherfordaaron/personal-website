@@ -5,8 +5,33 @@ body {
   --background-color: #e6f4d5;
   --text-color: #1f122a;
   margin: 0;
-  padding: 10px;
-  background-color: var(--background-color);
   font-size: 24px;
   font-family: 'Patua One', cursive;
+  background: linear-gradient(#b7e096, white);
+}
+
+h1 {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  min-height: 100vh;
+  padding-left: 30px;
+  flex-direction: column;
+}
+
+.headerText {
+  max-width: 500px;
+}
+
+@media (min-width: 550px) {
+  .header {
+    flex-direction: row;
+  }
 }
