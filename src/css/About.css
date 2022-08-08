@@ -2,6 +2,15 @@
   padding: 0 10px;
 }
 
+.about p {
+  text-align: justify;
+}
+
+.btnContainer {
+  justify-content: space-around;
+  width: 100%;
+}
+
 @media (min-width: 550px) {
   .about {
     padding: 0 250px;
