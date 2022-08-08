@@ -65,7 +65,7 @@ const About = () => {
         whileInView="show"
         exit="hide"
       >
-        I started programming a year ago and was attending university. After a semester, I decided to focus on web development on my own. Since then, I have learned a wide variety of tools and laguages including:
+        I started programming a year ago while I was attending university. After a semester, I decided to focus on web development on my own. Since then, I have learned a wide variety of tools and laguages including:
       </motion.p>
 
       <motion.ul
