@@ -1,34 +1,16 @@
 import "../css/Projects.css";
 import { motion } from "framer-motion";
 import ProjectTile from "./ProjectTile";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoneyBill1Wave,
   faHandScissors,
   faGlobeAmericas,
   faDice,
   faClipboardList,
-  faLocationDot,
-  faInfoCircle,
+  faLocationDot
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
 const Projects = () => {
-
-  const projectAnimation = {
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: .5,
-        type: "spring",
-        bounce: .3
-      }
-    },
-    hide: { opacity: 0, y: 50 }
-  }
-
   const gridAnimation = {
     show: {
       opacity: 1,
@@ -41,11 +23,6 @@ const Projects = () => {
       }
     },
     hide: { opacity: 0 }
-  }
-
-  const linkAnimation = {
-    on: { scale: 1.2, rotate: 15 },
-    off: { scale: 1, rotate: 0 }
   }
 
   return (

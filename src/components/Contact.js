@@ -9,7 +9,7 @@ const Contact = () => {
     off: { scale: 1, rotate: 0 }
   }
   return (
-    <div class="section flex column">
+    <div class="section flex column" id="contact">
       <h2>Get in Touch</h2>
       <div className="contactContainer flex">
         <motion.a

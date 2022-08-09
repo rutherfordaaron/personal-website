@@ -4,15 +4,14 @@ import "./css/Main.css";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Menu from "./components/Menu";
 
 import headshot from "./images/empty-headshot.jpg";
 
 const Main = () => {
-  const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-  const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-
   return (
     <main>
+      <Menu />
       <div className="header flex">
         <div className="headerText">
           <motion.h1

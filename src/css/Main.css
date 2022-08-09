@@ -29,6 +29,12 @@ button:hover {
   cursor: pointer;
 }
 
+button {
+  background-color: inherit;
+  border: none;
+  font-size: 18px;
+}
+
 .flex {
   display: flex;
   justify-content: center;

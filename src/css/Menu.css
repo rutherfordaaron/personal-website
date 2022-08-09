@@ -1,0 +1,25 @@
+.menuBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 38px;
+  z-index: 32;
+}
+
+.menuContainer {
+  background-color: white;
+  border-left: 2px solid black;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -320px;
+  align-items: flex-start;
+  padding-left: 20px;
+  gap: 50px;
+  z-index: 30;
+}
+
+.menuContainer a {
+  color: black
+}
