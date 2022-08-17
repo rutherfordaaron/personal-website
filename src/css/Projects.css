@@ -20,6 +20,11 @@
   box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
+.infoContainer {
+  overflow-y: scroll;
+  display: block;
+}
+
 .projectTitle {
   margin: 0;
 }
@@ -73,6 +78,10 @@
     height: 175px;
   }
 
+  .infoContainer {
+    display: block;
+  }
+
   .linkContainer {
     flex-direction: row;
     justify-content: space-around;
@@ -85,5 +94,11 @@
 
   .infoText {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .infoContainer {
+    display: flex;
   }
 }

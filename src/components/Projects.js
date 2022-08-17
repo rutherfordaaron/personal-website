@@ -7,7 +7,7 @@ import {
   faGlobeAmericas,
   faDice,
   faClipboardList,
-  faLocationDot
+  faStore
 } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
@@ -87,12 +87,12 @@ const Projects = () => {
         />
 
         <ProjectTile
-          title="This Website"
-          icon={faLocationDot}
-          siteLink="#"
-          repoLink="https://github.com/Hazipan/personal-website/"
+          title="E-Commerce Page"
+          icon={faStore}
+          siteLink="https://hazipan.github.io/e-commerce-page/"
+          repoLink="https://github.com/Hazipan/e-commerce-page/"
           info={
-            <p className="infoText">This website taught me how to create micro animations using framer-motion, as well as offer a way to showcase my work to potential employers like you!</p>
+            <p className="infoText">This is a mock webpage of an e-commerce site. This shows my ability to create pixel perfect, responsive designs. It also taught me about framer-motion, an animation package for react, and I learned what lightboxes are.</p>
           }
         />
       </motion.div>

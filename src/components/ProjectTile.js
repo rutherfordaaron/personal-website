@@ -32,7 +32,7 @@ const ProjectTile = (props) => {
 
   return (
     <motion.div
-      className="project flex column"
+      className={`project flex column ${showInfo ? "infoContainer" : ""}`}
       variants={projectAnimation}
     >
       {!showInfo ?

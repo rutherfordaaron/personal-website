@@ -13,6 +13,8 @@
 
 @media (min-width: 550px) {
   .about {
-    padding: 0 250px;
+
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
