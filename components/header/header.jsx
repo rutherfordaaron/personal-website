@@ -7,8 +7,8 @@ const Header = () => {
 
 
   useEffect(() => {
-    /* If the theme isn't store in local storage yet, get the OS prefered theme, 
-    set it to data-theme to affect app theme, and store it in local storage */
+    /* If the theme isn't stored in local storage yet, get the OS prefered theme, 
+    set it to data-theme to affect the app theme, and store it in local storage */
     if (!localStorage.getItem("theme")) {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.setAttribute('data-theme', 'dark');
@@ -17,7 +17,7 @@ const Header = () => {
         document.body.setAttribute('data-theme', 'light');
         localStorage.setItem("theme", "light");
       }
-      // If the theme is store in local storage, set it to data-theme to affect app theme
+      // If the theme is stored in local storage, set it to data-theme to affect the app theme
     } else if (localStorage.getItem("theme") === "dark") {
       document.body.setAttribute('data-theme', 'dark');
     } else {
@@ -25,7 +25,7 @@ const Header = () => {
     }
   }, [])
 
-  // Called on theme button press. Swaps the theme and stores it in local storage.
+  // Called when the theme button is pressed. It swaps the theme and stores it in local storage.
   const changeTheme = () => {
     if (localStorage.getItem("theme") === 'dark') {
       localStorage.setItem("theme", "light")
