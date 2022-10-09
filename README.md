@@ -1,2 +1,3 @@
-# personal-website
- My personal website for an online portfolio to show employers
+# My Personal Website
+
+This project is my personal website and portfolio

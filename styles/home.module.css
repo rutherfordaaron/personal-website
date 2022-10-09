@@ -1,0 +1,11 @@
+.hoverTest {
+  padding: 20px;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.hoverTest:hover {
+  color: var(--tertiary-color);
+  background-color: var(--secondary-color);
+  transition: var(--transition);
+}

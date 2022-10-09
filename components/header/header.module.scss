@@ -1,0 +1,74 @@
+/* Mixins to make the sun/moon icons rise and fall depending on the theme */
+
+@mixin sun($light) {
+  @if $light {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @else {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+}
+
+@mixin moon($dark) {
+  @if $dark {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  @else {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+}
+
+/* Implementation of making the sun/moon icon rise and fall with the theme */
+[data-theme=light] {
+  .sun {
+    @include sun($light: true);
+  }
+
+  .moon {
+    @include moon($dark: false);
+  }
+}
+
+[data-theme=dark] {
+  .sun {
+    @include sun($light: false);
+  }
+
+  .moon {
+    @include moon($dark: true);
+  }
+}
+
+.themeBtn {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: var(--transition);
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.themeBtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  transition: var(--transition);
+}
+
+.sun,
+.moon {
+  position: absolute;
+  left: calc(50% - .5rem);
+  top: calc(50% - .5rem);
+  transition: inherit;
+  opacity: 0;
+}
