@@ -12,8 +12,10 @@ const Home = () => {
         <title>Aaron Rutherford | Aspiring Web Developer</title>
       </Head>
       <Header />
-      <h1>Hello World,</h1>
-      <p className={styles.hoverTest}>I'm Aaron Rutherford.</p>
+      <main>
+        <h1>Hello World,</h1>
+        <p>I'm Aaron Rutherford.</p>
+      </main>
     </>
   )
 }
