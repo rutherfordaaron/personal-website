@@ -11,9 +11,9 @@ const Home = () => {
       <Head>
         <title>Aaron Rutherford | Aspiring Web Developer</title>
       </Head>
-      <Header />
-      <main>
-        <h1>Hello World,</h1>
+      <Header active="home" />
+      <main className={styles.main}>
+        <h1 className={styles.h1}><em>Hello World,</em></h1>
         <p>I'm Aaron Rutherford.</p>
       </main>
     </>

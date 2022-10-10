@@ -20,6 +20,8 @@
 
 body {
   --transition: all 0.25s ease-out;
+  --medium-transition: all .5s ease-out;
+  --slow-transition: all .75s ease-out;
   font-family: 'Raleway', sans-serif;
   font-size: calc(15px + 0.390625vw);
   display: block;
@@ -30,6 +32,7 @@ body {
   transition: var(--transition);
   background-image: url("../public/background.jpg");
   background-size: cover;
+  overflow-x: hidden;
 }
 
 body::before {

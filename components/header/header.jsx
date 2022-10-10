@@ -1,11 +1,20 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
-import { faSun, faCloud } from '@fortawesome/free-solid-svg-icons';
-import themeSwitchStyles from "./theme-switch.module.scss";
-import { useEffect } from 'react';
+// CSS Modules
+import styles from "./styles.module.scss";
+// Components
+import Link from "next/link";
+import ThemeSwitch from "./theme-switch/theme-switch";
+// React hooks
+import { useEffect, useState } from 'react';
 
-const Header = () => {
+import { motion } from 'framer-motion';
 
+
+const Header = ({ active }) => {
+  let [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
 
   useEffect(() => {
     /* If the theme isn't stored in local storage yet, get the OS prefered theme, 
@@ -26,40 +35,17 @@ const Header = () => {
     }
   }, [])
 
-  // Called when the theme button is pressed. It swaps the theme and stores it in local storage.
-  const changeTheme = () => {
-    if (localStorage.getItem("theme") === 'dark') {
-      localStorage.setItem("theme", "light")
-      document.body.setAttribute('data-theme', 'light');
-    } else {
-      localStorage.setItem("theme", "dark")
-      document.body.setAttribute('data-theme', 'dark');
-    }
+  // Framer-motion Variants
+  const navVariants = {
+    visible: { x: 0 },
+    hidden: { x: 200 }
   }
 
   return (
-    <header>
-      {/* Theme switch button */}
-      <button className={themeSwitchStyles.themeBtn} type="button" onClick={changeTheme}>
-        <FontAwesomeIcon icon={faMoon} className={themeSwitchStyles.moon} />
-        <div className={themeSwitchStyles.stars}>
-          <div className={themeSwitchStyles.star1} />
-          <div className={themeSwitchStyles.star2} />
-          <div className={themeSwitchStyles.star3} />
-        </div>
-        <FontAwesomeIcon icon={faSun} className={themeSwitchStyles.sun} />
-        <div className={themeSwitchStyles.clouds}>
-          <div className={themeSwitchStyles.cloud1Wrapper}>
-            <FontAwesomeIcon icon={faCloud} className={themeSwitchStyles.cloud1Border} />
-            <FontAwesomeIcon icon={faCloud} className={themeSwitchStyles.cloud1} />
-          </div>
-          <div className={themeSwitchStyles.cloud2Wrapper}>
-            <FontAwesomeIcon icon={faCloud} className={themeSwitchStyles.cloud2Border} />
-            <FontAwesomeIcon icon={faCloud} className={themeSwitchStyles.cloud2} />
-          </div>
-        </div>
-        <div className={themeSwitchStyles.hill} />
-      </button>
+    <header className={styles.header}>
+      <ThemeSwitch />
+      {/* ---------- Navigation Links ---------- */}
+
     </header>
   )
 }
