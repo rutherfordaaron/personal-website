@@ -1,0 +1,39 @@
+.navBtn {
+  font-size: 1.6rem;
+  z-index: 20;
+}
+
+.navBtn:hover {
+  color: var(--tertiary-color);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  background-color: var(--secondary-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 200px;
+  padding: 2rem 0;
+  z-index: 19;
+}
+
+.link {
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5em;
+  padding: .2rem;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: white;
+  transition: var(--fast-transition);
+}

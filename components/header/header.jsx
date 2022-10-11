@@ -1,20 +1,16 @@
 // CSS Modules
-import styles from "./styles.module.scss";
+import styles from "./header.module.scss";
 // Components
-import Link from "next/link";
 import ThemeSwitch from "./theme-switch/theme-switch";
+import Nav from "./nav/nav";
 // React hooks
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import { motion } from 'framer-motion';
 
 
 const Header = ({ active }) => {
-  let [showMenu, setShowMenu] = useState(false);
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu)
-  }
 
   useEffect(() => {
     /* If the theme isn't stored in local storage yet, get the OS prefered theme, 
@@ -43,9 +39,8 @@ const Header = ({ active }) => {
 
   return (
     <header className={styles.header}>
+      <Nav active={active} />
       <ThemeSwitch />
-      {/* ---------- Navigation Links ---------- */}
-
     </header>
   )
 }
