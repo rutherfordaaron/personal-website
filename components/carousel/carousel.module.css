@@ -1,0 +1,15 @@
+.carrousel {
+  position: relative;
+  width: calc(100% - 2rem);
+  /* border: 1px solid blue; */
+  height: 75px;
+}
+
+.imageWrapper {
+  display: block;
+  top: 0;
+  right: 0;
+  width: 75px;
+  height: 75px;
+  /* border: 2px solid red */
+}

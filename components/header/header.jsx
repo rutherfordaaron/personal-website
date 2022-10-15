@@ -6,12 +6,7 @@ import Nav from "./nav/nav";
 // React hooks
 import { useEffect } from 'react';
 
-import { motion } from 'framer-motion';
-
-
 const Header = ({ active }) => {
-
-
   useEffect(() => {
     /* If the theme isn't stored in local storage yet, get the OS prefered theme, 
     set it to data-theme to affect the app theme, and store it in local storage */
@@ -30,12 +25,6 @@ const Header = ({ active }) => {
       document.body.setAttribute('data-theme', 'light');
     }
   }, [])
-
-  // Framer-motion Variants
-  const navVariants = {
-    visible: { x: 0 },
-    hidden: { x: 200 }
-  }
 
   return (
     <header className={styles.header}>

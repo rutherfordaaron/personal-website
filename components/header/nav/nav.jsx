@@ -32,7 +32,8 @@ const Nav = () => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.25,
-        style: "linear"
+        style: "linear",
+        display: "block"
       }
     },
     inactive: {
@@ -41,7 +42,10 @@ const Nav = () => {
       transition: {
         when: "afterChildren",
         staggerChildren: 0.1,
-        style: "linear"
+        style: "linear",
+        transitionEnd: {
+          display: "none",
+        }
       }
     },
     exit: {
@@ -50,7 +54,10 @@ const Nav = () => {
       transition: {
         when: "afterChildren",
         staggerChildren: 0.1,
-        style: "linear"
+        style: "linear",
+        transitionEnd: {
+          display: "none",
+        }
       }
     },
   }
@@ -58,11 +65,11 @@ const Nav = () => {
   const linkVariants = {
     active: { opacity: 1, y: 0, x: 0 },
     inactive: { opacity: 0, y: 100, x: 0 },
-    exit: { opacity: 0, x: -100, transitionEnd: { y: 100, x: 0 } },
+    exit: { opacity: 0, y: -100, x: 0 },
   }
 
   return (
-    <AnimatePresence>
+    <>
       {/* Hamburger menu button */}
       <motion.button
         id="navBtn"
@@ -99,7 +106,7 @@ const Nav = () => {
           </motion.a>
         </Link>
       </motion.nav>
-    </AnimatePresence>
+    </>
   )
 }
 

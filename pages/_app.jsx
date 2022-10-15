@@ -1,14 +1,14 @@
 import { AnimatePresence } from "framer-motion";
 import Header from "../components/header/header";
 
-import "../styles/global.css";
+import "../public/styles/global.css";
 
 const App = ({ Component, pageProps, router }) => {
   return (
     <>
       <Header />
       <AnimatePresence
-        exitBeforeEnter
+        mode="wait"
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >

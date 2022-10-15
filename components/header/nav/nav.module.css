@@ -36,4 +36,5 @@
 .link:hover {
   color: white;
   transition: var(--fast-transition);
+  cursor: pointer;
 }

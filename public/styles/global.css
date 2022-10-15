@@ -31,9 +31,11 @@ body {
   background-color: var(--main-color);
   color: var(--font-color);
   transition: var(--transition);
-  background-image: url("../public/background.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
 body::before {
@@ -42,8 +44,8 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   backdrop-filter: invert(var(--invert));
   z-index: -1;
   transition: var(--transition);
@@ -68,4 +70,8 @@ button:hover {
 h1 {
   font-weight: 800;
   margin: 0;
+}
+
+p {
+  text-align: justify;
 }
