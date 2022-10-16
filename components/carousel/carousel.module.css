@@ -1,15 +1,12 @@
 .carrousel {
-  position: relative;
   width: calc(100% - 2rem);
-  /* border: 1px solid blue; */
+  max-width: 800px;
   height: 75px;
+  margin: 0 auto;
 }
 
 .imageWrapper {
-  display: block;
-  top: 0;
-  right: 0;
+  position: absolute;
   width: 75px;
   height: 75px;
-  /* border: 2px solid red */
 }
