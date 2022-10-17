@@ -1,12 +1,18 @@
 .carrousel {
   width: calc(100% - 2rem);
   max-width: 800px;
-  height: 75px;
-  margin: 0 auto;
+  margin: 1rem auto;
+  height: 50px;
 }
 
 .imageWrapper {
   position: absolute;
   width: 75px;
   height: 75px;
+}
+
+@media(min-width: 800px) {
+  .carrousel {
+    height: 75px;
+  }
 }

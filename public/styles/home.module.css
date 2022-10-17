@@ -1,0 +1,10 @@
+.imageWrapper {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.headshot {
+  border: 3px solid var(--tertiary-color);
+  border-radius: 15%;
+}

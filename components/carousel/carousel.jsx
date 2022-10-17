@@ -12,14 +12,11 @@ const Carrousel = ({ images }) => {
     if (dataFetchedRef.current) return;
     dataFetchedRef.current = true;
 
-    console.log("starting carousel");
+    console.log("starting carousel...");
     let index = 0;
 
     setInterval(() => {
-      console.log("carousel element created")
-      let arr = [...carousel];
-      arr.push(images[index]);
-      console.log(arr);
+      let arr = [images[index]];
       setCarousel(arr);
 
       index >= images.length - 1 ? index = 0 : index++;
@@ -33,12 +30,16 @@ const Carrousel = ({ images }) => {
   }
 
   const getAnimationDuration = () => {
-    return window.screen.width / 600 * 5
+    return getScreenWidth() / 600 * 4
+  }
+
+  const getImageSize = () => {
+    return getScreenWidth() > 800 ? 75 : 50
   }
 
   return (
     <div className={styles.carrousel}>
-      <AnimatePresence className={styles.test}>
+      <AnimatePresence>
         {carousel.map((el, i) => {
           const id = Math.random();
           return (
@@ -53,7 +54,7 @@ const Carrousel = ({ images }) => {
               }}
               key={`carouselImg${id}`}
             >
-              <Image src={el} alt="test image" width={75} height={75} />
+              <Image src={el} alt="test image" width={getImageSize()} height={getImageSize()} />
             </motion.div>
           )
         })}
