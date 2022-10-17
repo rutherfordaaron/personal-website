@@ -1,5 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
 
 import "../public/styles/global.css";
 
@@ -14,6 +15,7 @@ const App = ({ Component, pageProps, router }) => {
       >
         <Component {...pageProps} key={router.pathname} />
       </AnimatePresence>
+      <Footer />
     </>
   )
 }

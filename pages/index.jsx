@@ -11,11 +11,15 @@ import { motion } from "framer-motion"
 
 const Home = () => {
   const imgSrcArr = [
+    "/images/logos/html logo.png",
     "/images/logos/css logo.png",
     "/images/logos/javascript logo.png",
+    "/images/logos/react logo.png",
+    "/images/logos/next logo.png",
     "/images/logos/express logo.png",
     "/images/logos/node logo.png",
-    "/images/logos/react logo.png"
+    "/images/logos/mongodb logo.png",
+    "/images/logos/mongoose logo.png",
   ]
 
   return (

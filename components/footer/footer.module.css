@@ -1,0 +1,11 @@
+.footer {
+  background-color: var(--footer-color);
+  /* color: var(--main-color); */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}

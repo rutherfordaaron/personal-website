@@ -47,7 +47,7 @@ const Carrousel = ({ images }) => {
               className={styles.imageWrapper}
               initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 0, x: 0 }}
-              exit={{ opacity: [0, 1, 0], x: "clamp(110px, calc(100vw - 150px), 725px)" }}
+              exit={{ opacity: [0, 1, 0], x: "clamp(110px, calc(100vw - 120px), 725px)" }}
               transition={{
                 ease: "linear",
                 duration: `${getScreenWidth() >= 800 ? getAnimationDuration() : 8}`
