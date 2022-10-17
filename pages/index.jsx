@@ -1,13 +1,14 @@
-// Next.js and custom component imports
+// Next.js and custom components
 import Head from "next/head";
 import Image from "next/future/image";
 import Main from "../components/main";
 import Carousel from "../components/carousel/carousel";
 
-// Component styles import
+// Component styles
 import styles from "../public/styles/home.module.css";
 // Animation components
 import { motion } from "framer-motion"
+import motionProps from "../util/motion-props";
 
 const Home = () => {
   const imgSrcArr = [
@@ -21,17 +22,6 @@ const Home = () => {
     "/images/logos/mongodb logo.png",
     "/images/logos/mongoose logo.png",
   ]
-
-  const motionVariants = {
-    initial: { x: -20, opacity: 0 },
-    whileInView: { x: 0, opacity: 1 }
-  }
-
-  const motionProps = {
-    variants: motionVariants,
-    initial: "initial",
-    whileInView: "whileInView"
-  }
 
   return (
     <>
