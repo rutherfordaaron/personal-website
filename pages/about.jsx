@@ -26,7 +26,7 @@ const About = () => {
       <Main>
         <motion.h1 {...motionProps}>About Me</motion.h1>
         <motion.p {...motionProps}>Me and my wife, Harmony, live in the Roseway neighborhood of NE Portland, Oregon. Our fluffball's name is Lucy, and she's very vocal in the mornings if you forget to give her some good play time.</motion.p>
-        <motion.p {...motionProps} className="codeDecor smallTxt"><em>(Hover over an image)</em></motion.p>
+        <motion.p {...motionProps} className="codeDecor smallTxt"><em>(Tap an image)</em></motion.p>
         <div className={styles.imageGrid3}>
           <ImgCard
             className={`${styles.img2} ${styles.smallImg}`}

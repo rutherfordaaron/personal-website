@@ -1,3 +1,4 @@
+import { useState } from "react";
 // Animation components
 import { motion } from "framer-motion";
 import motionProps from "../../util/motion-props";
@@ -5,11 +6,13 @@ import motionProps from "../../util/motion-props";
 import styles from "./image-card.module.css";
 
 const ImgCard = ({ children, text, className }) => {
+  let [tap, setTap] = useState(false);
   return (
     <motion.div
       {...motionProps}
       className={`${className || ""} ${styles.card}`}
-      whileHover={{ rotateY: 180 }}
+      animate={tap ? { rotateY: 180 } : { rotateY: 0 }}
+      onTap={() => { setTap(!tap) }}
       transition={{ duration: 1 }}
     >
       {children}
