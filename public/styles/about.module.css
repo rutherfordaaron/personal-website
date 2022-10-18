@@ -1,9 +1,8 @@
 .image {
   border-radius: 20px;
-  border: 2px solid var(--tertiary-color);
 }
 
-.imageGrid {
+.imageGrid3 {
   display: grid;
   grid-template-areas:
     "img1 img1 img2"
@@ -23,4 +22,8 @@
 
 .img3 {
   grid-area: img3;
+}
+
+.smallImg {
+  font-size: .75rem;
 }

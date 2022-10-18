@@ -1,6 +1,7 @@
 import Main from "../components/main";
 import Head from "next/head";
 import Image from "next/image";
+import ImgCard from "../components/image-card/image-card";
 // Animation components
 import { motion } from "framer-motion";
 import motionProps from "../util/motion-props";
@@ -25,8 +26,12 @@ const About = () => {
       <Main>
         <motion.h1 {...motionProps}>About Me</motion.h1>
         <motion.p {...motionProps}>Me and my wife, Harmony, live in the Roseway neighborhood of NE Portland, Oregon. Our fluffball's name is Lucy, and she's very vocal in the mornings if you forget to give her some good play time.</motion.p>
-        <div className={styles.imageGrid}>
-          <motion.div {...motionProps} className={styles.img2}>
+        <motion.p {...motionProps} className="codeDecor smallTxt"><em>(Hover over an image)</em></motion.p>
+        <div className={styles.imageGrid3}>
+          <ImgCard
+            className={`${styles.img2} ${styles.smallImg}`}
+            text="My gorgeous wife, Harmony. She makes the best cookies and breads!"
+          >
             <Image
               src={harmonyHeadshot}
               height={2576}
@@ -34,8 +39,11 @@ const About = () => {
               alt="Harmony"
               className={styles.image}
             />
-          </motion.div>
-          <motion.div {...motionProps} className={styles.img1}>
+          </ImgCard>
+          <ImgCard
+            className={styles.img1}
+            text="Me and my wife on a rainy day at the Oregon Zoo."
+          >
             <Image
               src={umbrellaShot}
               alt="us under an umbrella"
@@ -43,8 +51,11 @@ const About = () => {
               width={1932}
               className={styles.image}
             />
-          </motion.div>
-          <motion.div {...motionProps} className={styles.img3}>
+          </ImgCard>
+          <ImgCard
+            className={`${styles.img3} ${styles.smallImg}`}
+            text="Our kitten Lucy, investigating the world from my shoulder."
+          >
             <Image
               src={lucyOnShoulder}
               alt="Lucy on my shoulder"
@@ -52,7 +63,7 @@ const About = () => {
               width={1932}
               className={styles.image}
             />
-          </motion.div>
+          </ImgCard>
         </div>
       </Main>
     </>

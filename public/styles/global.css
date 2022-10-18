@@ -79,6 +79,10 @@ p {
   text-align: justify;
 }
 
+.smallTxt {
+  font-size: .8rem;
+}
+
 a {
   color: inherit;
 }
