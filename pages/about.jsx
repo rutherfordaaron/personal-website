@@ -34,8 +34,8 @@ const About = () => {
           >
             <Image
               src={harmonyHeadshot}
-              height={2576}
-              width={1932}
+              height={644}
+              width={483}
               alt="Harmony"
               className={styles.image}
             />
@@ -46,9 +46,9 @@ const About = () => {
           >
             <Image
               src={umbrellaShot}
-              alt="us under an umbrella"
-              height={2576}
-              width={1932}
+              alt="me and my wife under an umbrella"
+              height={644}
+              width={483}
               className={styles.image}
             />
           </ImgCard>
@@ -59,12 +59,14 @@ const About = () => {
             <Image
               src={lucyOnShoulder}
               alt="Lucy on my shoulder"
-              height={2576}
-              width={1932}
+              height={644}
+              width={483}
               className={styles.image}
             />
           </ImgCard>
         </div>
+
+        <motion.p {...motionProps}>My hobbies, beyond web development, include cooking, origami, writting, and games (board games, table top role play games, and video games). I make the best pancakes! Ask me to make them for you sometime.</motion.p>
       </Main>
     </>
   )

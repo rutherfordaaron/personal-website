@@ -21,7 +21,6 @@ const Home = () => {
     "/images/logos/express logo.png",
     "/images/logos/node logo.png",
     "/images/logos/mongodb logo.png",
-    "/images/logos/mongoose logo.png",
   ]
 
   return (
@@ -51,16 +50,16 @@ const Home = () => {
             <motion.p {...motionProps}>My name is Aaron Rutherford, and I'm a web developer. I started my web development journey in February of 2022, and I've come a long way. Take a look!</motion.p>
           </section>
 
-          <section>
+          {/* <section>
             <motion.h2 {...motionProps}>My Journey</motion.h2>
             <motion.div {...motionProps}>
               <Timeline />
             </motion.div>
-          </section>
+          </section> */}
 
           <section>
             <motion.h2 className={styles.h2} {...motionProps}>The Tools I Use</motion.h2>
-            <motion.p {...motionProps}>I have an advanced knowledge of the foundations of the web: HTML, CSS, and JavaScript. I specialize in the MERN stack and prefer Next.js when building fullstack projects.</motion.p>
+            <motion.p {...motionProps}>I have an advanced knowledge of the foundations of the web: HTML, CSS, and JavaScript. I am capable of full stack development and prefer Next.js to build the front and the back in a seamless environment. MongoDB is my go to database service.</motion.p>
 
             {/* Animated Carousel */}
             <motion.div {...motionProps}>
