@@ -10,7 +10,8 @@
   --footer-color: #a1b884;
   --tertiary-color: #5d8327;
   --font-color: black;
-  --invert: 0
+  --invert: 0;
+  --card-content-background: hsla(0, 50%, 100%, 80%);
 }
 
 [data-theme=dark] {
@@ -21,6 +22,7 @@
   --tertiary-color: #5d8327;
   --font-color: white;
   --invert: 1;
+  --card-content-background: hsla(0, 50%, 0%, 80%);
 }
 
 body {
