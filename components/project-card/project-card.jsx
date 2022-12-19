@@ -9,9 +9,9 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./project-card.module.css";
 
-const ProjectCard = ({ caption, description, src, link }) => {
-  const contentId = `${src}Content`;
-  const caretId = `${src}Caret`
+const ProjectCard = ({ caption, description, src, link, alt }) => {
+  const contentId = `${caption}Content`;
+  const caretId = `${caption}Caret`
   const toggleContent = (e) => {
     const content = document.getElementById(contentId);
     const caret = document.getElementById(caretId);
@@ -34,7 +34,7 @@ const ProjectCard = ({ caption, description, src, link }) => {
           <Image
             src={src}
             fill="true"
-            alt="tip calculator project"
+            alt={alt}
           />
         </a>
       </div>

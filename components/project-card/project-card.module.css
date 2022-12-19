@@ -26,6 +26,7 @@
   transition-duration: .2s;
   box-shadow: 0 -5px 5px hsla(0, 0%, 0%, 5%);
   overflow-y: hidden;
+  line-height: 20px;
 }
 
 .captionWrapper {
