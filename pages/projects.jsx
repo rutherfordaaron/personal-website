@@ -1,6 +1,4 @@
-import Header from "../components/header/header";
 import Head from "next/head";
-import Image from "next/image";
 // Animation components
 import Main from "../components/main";
 // Custom components
