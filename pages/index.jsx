@@ -70,7 +70,6 @@ const Home = () => {
           <section>
             <motion.h2 {...motionProps}>Let's Connect!</motion.h2>
             <motion.p {...motionProps}>You can find me on many platforms. Send me a request and lets chat!</motion.p>
-            <SocialLinks />
           </section>
         </article>
       </Main>
