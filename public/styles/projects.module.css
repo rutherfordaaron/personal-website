@@ -2,8 +2,19 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
-  min-height: 100vh;
   gap: 30px;
+}
+
+@media (min-width: 700px) {
+  .projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

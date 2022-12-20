@@ -11,6 +11,10 @@
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, .2);
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .cardBack {
   background-color: var(--main-color);
   position: absolute;

@@ -19,50 +19,58 @@ const About = () => {
         <title>Aaron Rutherford | About Me</title>
       </Head>
       <Main>
-        <article>
-          <motion.h1 {...motionProps}>About Me</motion.h1>
-          <motion.p {...motionProps}>Me and my wife, Harmony, live in the Roseway neighborhood of NE Portland, Oregon. Our fluffball's name is Lucy, and she's very vocal in the mornings if you forget to give her some good play time.</motion.p>
-          <motion.p {...motionProps} className="codeDecor smallTxt"><em>(Tap an image)</em></motion.p>
-          <div className={styles.imageGrid3}>
-            <ImgCard
-              className={`${styles.img2} ${styles.smallImg}`}
-              text="My gorgeous wife, Harmony. She makes the best cookies and breads!"
-            >
-              <Image
-                src={harmonyHeadshot}
-                height={644}
-                width={483}
-                alt="Harmony"
-                className={styles.image}
-              />
-            </ImgCard>
-            <ImgCard
-              className={styles.img1}
-              text="Me and my wife on a rainy day at the Oregon Zoo."
-            >
-              <Image
-                src={umbrellaShot}
-                alt="me and my wife under an umbrella"
-                height={644}
-                width={483}
-                className={styles.image}
-              />
-            </ImgCard>
-            <ImgCard
-              className={`${styles.img3} ${styles.smallImg}`}
-              text="Our kitten Lucy, napping in her favorite place."
-            >
-              <Image
-                src={lucySleeping}
-                alt="lucy, my cat, sleeping"
-                height={644}
-                width={483}
-                className={styles.image}
-              />
-            </ImgCard>
+        <motion.h1 {...motionProps}>About Me</motion.h1>
+        <article className={styles.about}>
+          <div clssName={styles.content1}>
+            <motion.p {...motionProps}>Me and my wife, Harmony, live in the Roseway neighborhood of NE Portland, Oregon. We moved here from Utah in Novemeber of 2021 for a change of environment and a more vaired job market. My wife is an amazing baker and quite the bookworm. We have a small bookshelf in our apartemnt that is always completely filled with books from the library.</motion.p>
+
+            <motion.p {...motionProps}>Our fluffball's name is Lucy, and she's very vocal in the mornings if you forget to give her some good play time. We found her in a nearby pet shop when we moved here to Portland and instantly fell in love with her. She loves to push boundaries and see what she can get away with, but she's also incredibly snuggly and loves watching movies with us.</motion.p>
+
+            <motion.p {...motionProps}>My hobbies, beyond web development, include cooking, origami, writting, and games (board games, table top role play games, and video games). I make the best pancakes! Ask me to make them for you sometime. And if you ever want to get together to play board games or rpg games, I would love to.</motion.p>
           </div>
 
-          <motion.p {...motionProps}>My hobbies, beyond web development, include cooking, origami, writting, and games (board games, table top role play games, and video games). I make the best pancakes! Ask me to make them for you sometime.</motion.p>
+          <div className={styles.picGrid}>
+            <motion.p {...motionProps} className="codeDecor smallTxt"><em>(Tap an image)</em></motion.p>
+
+            <div className={styles.imageGrid3}>
+              <ImgCard
+                className={`${styles.img2} ${styles.smallImg}`}
+                text="My gorgeous wife, Harmony. She makes the best cookies and breads!"
+              >
+                <Image
+                  src={harmonyHeadshot}
+                  height={644}
+                  width={483}
+                  alt="Harmony"
+                  className={styles.image}
+                />
+              </ImgCard>
+              <ImgCard
+                className={styles.img1}
+                text="Me and my wife on a rainy day at the Oregon Zoo."
+              >
+                <Image
+                  src={umbrellaShot}
+                  alt="me and my wife under an umbrella"
+                  height={644}
+                  width={483}
+                  className={styles.image}
+                />
+              </ImgCard>
+              <ImgCard
+                className={`${styles.img3} ${styles.smallImg}`}
+                text="Our kitten Lucy, napping in her favorite place."
+              >
+                <Image
+                  src={lucySleeping}
+                  alt="lucy, my cat, sleeping"
+                  height={644}
+                  width={483}
+                  className={styles.image}
+                />
+              </ImgCard>
+            </div>
+          </div>
         </article>
       </Main>
     </>

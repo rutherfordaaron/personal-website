@@ -61,7 +61,7 @@ body::before {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
   min-height: 80vh;
@@ -119,4 +119,10 @@ button:hover {
 
 .activeNavBtn {
   color: var(--main-color);
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 0 30px;
+  }
 }

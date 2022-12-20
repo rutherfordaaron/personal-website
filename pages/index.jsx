@@ -36,22 +36,28 @@ const Home = () => {
               <p className="codeDecor"><em>");</em></p>
             </motion.div>
 
-            {/* Headshot image */}
-            <motion.div className={styles.imageWrapper} {...motionProps}>
-              <Image
-                src="/images/my-images/square-headshot.jpg"
-                width={250} height={250}
-                className={styles.headshot}
-                alt="Aaron Rutherford"
-              />
-            </motion.div>
+            <div className={styles.introGrid}>
+              {/* Headshot image */}
+              <div className={styles.wrapperBlock}>
+                <motion.div className={styles.imageWrapper} {...motionProps}>
+                  <Image
+                    src="/images/my-images/square-headshot.jpg"
+                    fill="true"
+                    className={styles.headshot}
+                    alt="Aaron Rutherford"
+                  />
+                </motion.div>
+              </div>
 
-            <motion.p {...motionProps}>My name is Aaron Rutherford, and I'm a web developer. I started my web development journey in February of 2022, and I've come a long way. Take a look!</motion.p>
+              <div className={styles.intro}>
+                <motion.p {...motionProps}>My name is Aaron Rutherford, and I'm a web developer and a coding instructor with <a href="https://www.codingwithkids.com/">Coding with Kids</a>. I'm completely self taught and have learned through a wide variety of resources: <a href="https://www.freecodecamp.org/">freeCodeCamp</a>, <a href="https://www.udemy.com/">Udemy</a>, YouTube, and a variety of forums. I started my web development journey in February of 2022, and I've come a long way. Take a look!</motion.p>
+              </div>
+            </div>
           </section>
 
           <section>
             <motion.h2 className={styles.h2} {...motionProps}>The Tools I Use</motion.h2>
-            <motion.p {...motionProps}>I have an advanced knowledge of the foundations of the web: HTML, CSS, and JavaScript. I am capable of full stack development and prefer Next.js to build the front and the back in a seamless environment. MongoDB is my go to database service.</motion.p>
+            <motion.p {...motionProps}>I have an advanced knowledge of the foundations of the web: HTML, CSS, and JavaScript. I'm skilled in using React and packages that work with React such as <a href="https://www.framer.com/motion/">framer-motion</a>. I am capable of full stack development and prefer Next.js to build the front and the back in a seamless environment. MongoDB is my go to database service, but I'm just a novice with it so far. I'm actively working on a project that uses MongoDB to create users and store data.</motion.p>
 
             {/* Animated Carousel */}
             <motion.div {...motionProps}>

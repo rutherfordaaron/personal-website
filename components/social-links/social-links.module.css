@@ -1,6 +1,8 @@
 .socialGrid {
   display: flex;
   justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .socialGrid a {

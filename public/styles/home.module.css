@@ -1,10 +1,41 @@
 .imageWrapper {
-  margin: 1rem auto;
   display: flex;
   justify-content: center;
+  aspect-ratio: 1;
+  width: 50vw;
+  max-width: 400px;
+  height: auto;
+  position: absolute;
+}
+
+.wrapperBlock {
+  width: 50vw;
+  max-width: 400px;
+  height: 50vw;
+  max-height: 400px;
+  margin: 0 auto;
 }
 
 .headshot {
   border: 3px solid var(--tertiary-color);
   border-radius: 15%;
+}
+
+@media (min-width: 800px) {
+  .introGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "intro picture";
+    gap: 40px;
+  }
+
+  .wrapperBlock {
+    grid-area: picture;
+    justify-self: center;
+  }
+
+  .intro {
+    grid-area: intro;
+    align-self: center;
+  }
 }

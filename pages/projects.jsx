@@ -36,7 +36,7 @@ const Projects = () => {
 
           <section>
             <motion.h2 {...motionProps}>Past Projects</motion.h2>
-            <motion.div
+            <div
               {...motionProps}
               className={styles.projectGrid}
             >
@@ -75,7 +75,7 @@ const Projects = () => {
                 alt="todo project screenshot"
                 link="https://hazipan.github.io/todo-app/"
               />
-            </motion.div>
+            </div>
           </section>
         </article>
       </Main>
