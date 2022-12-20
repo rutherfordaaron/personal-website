@@ -12,7 +12,7 @@
   --font-color: black;
   --invert: 0;
   --card-content-background: hsla(0, 50%, 100%, 80%);
-  --link-color: hsl(0, 0%, 10%);
+  --link-color: hsl(120, 50%, 5%);
 }
 
 [data-theme=dark] {
