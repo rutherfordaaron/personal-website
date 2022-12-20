@@ -27,6 +27,10 @@
   --link-color: hsl(120, 50%, 95%);
 }
 
+html {
+  background-color: var(--main-color);
+}
+
 body {
   --fast-transition: all 0.12s ease-out;
   --transition: all 0.25s ease-out;
