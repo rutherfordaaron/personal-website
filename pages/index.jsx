@@ -3,8 +3,7 @@ import Head from "next/head";
 import Image from "next/future/image";
 import Main from "../components/main";
 import Carousel from "../components/carousel/carousel";
-import Timeline from "../components/timeline/timeline";
-
+import SocialLinks from "../components/social-links/social-links";
 // Component styles
 import styles from "../public/styles/home.module.css";
 // Animation components
@@ -50,13 +49,6 @@ const Home = () => {
             <motion.p {...motionProps}>My name is Aaron Rutherford, and I'm a web developer. I started my web development journey in February of 2022, and I've come a long way. Take a look!</motion.p>
           </section>
 
-          {/* <section>
-            <motion.h2 {...motionProps}>My Journey</motion.h2>
-            <motion.div {...motionProps}>
-              <Timeline />
-            </motion.div>
-          </section> */}
-
           <section>
             <motion.h2 className={styles.h2} {...motionProps}>The Tools I Use</motion.h2>
             <motion.p {...motionProps}>I have an advanced knowledge of the foundations of the web: HTML, CSS, and JavaScript. I am capable of full stack development and prefer Next.js to build the front and the back in a seamless environment. MongoDB is my go to database service.</motion.p>
@@ -67,6 +59,12 @@ const Home = () => {
               <Carousel images={imgSrcArr} />
               <p className="codeDecor"><em>/&gt;</em></p>
             </motion.div>
+          </section>
+
+          <section>
+            <motion.h2 {...motionProps}>Let's Connect!</motion.h2>
+            <motion.p {...motionProps}>You can find me on many platforms. Send me a request and lets chat!</motion.p>
+            <SocialLinks />
           </section>
         </article>
       </Main>

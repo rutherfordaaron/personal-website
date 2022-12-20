@@ -6,13 +6,8 @@ import ImgCard from "../components/image-card/image-card";
 import { motion } from "framer-motion";
 import motionProps from "../util/motion-props";
 // Images sources
-import forestPark1 from "../public/images/my-images/forest park 1.jpg";
-import forestPark2 from "../public/images/my-images/forest park 2.jpg";
-import lucyCinnamonRoll from "../public/images/my-images/lucy cinnamon roll.jpg";
 import lucySleeping from "../public/images/my-images/lucy sleeping.jpg";
-import lucyOnShoulder from "../public/images/my-images/lucy on shoulder.jpg";
 import harmonyHeadshot from "../public/images/my-images/harmony headshot.jpg";
-import photoStrip from "../public/images/my-images/photo strip.jpg";
 import umbrellaShot from "../public/images/my-images/us under umbrella.jpg";
 
 import styles from "../public/styles/about.module.css";
@@ -54,11 +49,11 @@ const About = () => {
           </ImgCard>
           <ImgCard
             className={`${styles.img3} ${styles.smallImg}`}
-            text="Our kitten Lucy, investigating the world from my shoulder."
+            text="Our kitten Lucy, napping in her favorite place."
           >
             <Image
-              src={lucyOnShoulder}
-              alt="Lucy on my shoulder"
+              src={lucySleeping}
+              alt="lucy, my cat, sleeping"
               height={644}
               width={483}
               className={styles.image}
