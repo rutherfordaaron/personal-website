@@ -1,0 +1,128 @@
+/* Source code Font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* Gentium Font */
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap');
+
+[data-theme=light] {
+  --main-color: #bcd19f;
+  --main-color-transparent: rgba(188, 209, 159, 0.9);
+  --secondary-color: #1e2810;
+  --footer-color: #a1b884;
+  --tertiary-color: #5d8327;
+  --font-color: black;
+  --invert: 0;
+  --card-content-background: hsla(0, 50%, 100%, 80%);
+  --link-color: hsl(120, 50%, 5%);
+}
+
+[data-theme=dark] {
+  --main-color: #1e2810;
+  --main-color-transparent: rgba(30, 40, 16, 0.9);
+  --secondary-color: #bcd19f;
+  --footer-color: #444f33;
+  --tertiary-color: #5d8327;
+  --font-color: white;
+  --invert: 1;
+  --card-content-background: hsla(0, 50%, 0%, 80%);
+  --link-color: hsl(120, 50%, 95%);
+}
+
+body {
+  --fast-transition: all 0.12s ease-out;
+  --transition: all 0.25s ease-out;
+  --medium-transition: all .5s ease-out;
+  --slow-transition: all .75s ease-out;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: calc(15px + 0.390625vw);
+  font-weight: 600;
+  display: block;
+  margin: 0;
+  background-color: var(--main-color);
+  color: var(--font-color);
+  transition: var(--transition);
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  background-color: var(--main-color-transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: invert(var(--invert));
+  z-index: -1;
+  transition: var(--transition);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-height: 80vh;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  text-align: justify;
+}
+
+.smallTxt {
+  font-size: .8rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.codeDecor {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+  color: var(--secondary-color);
+  opacity: .5;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.activeNavBtn {
+  color: var(--main-color);
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,301 @@
+$transition: all .75s ease-out;
+$fast-transition: all .25s ease-out;
+
+/* Mixins to make the sun/moon icons rise and fall depending on the theme */
+/* Sun and clouds mixin  */
+@mixin sun($light, $clouds) {
+  @if $light {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+
+  @else if $clouds {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+
+  @else {
+    transform: translateX(5rem) translateY(2rem);
+    opacity: 0;
+  }
+}
+
+/* Moon and stars mixin  */
+@mixin moon($dark, $stars) {
+  @if $dark {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+
+  @else if $stars {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+
+  @else {
+    transform: translateX(-4rem) translateY(2rem);
+    opacity: 0;
+  }
+}
+
+/* Implementation of making the sun/moon icon rise and fall with the theme */
+[data-theme=light] {
+  .sun {
+    @include sun($light: true, $clouds: false);
+  }
+
+  .clouds {
+    @include sun($light: false, $clouds: true);
+  }
+
+  .moon {
+    @include moon($dark: false, $stars: false);
+  }
+
+  .stars {
+    @include moon($dark: false, $stars: false);
+  }
+}
+
+[data-theme=dark] {
+  .sun {
+    @include sun($light: false, $clouds: false);
+  }
+
+  .clouds {
+    @include sun($light: false, $clouds: false);
+  }
+
+  .moon {
+    @include moon($dark: true, $stars: false);
+  }
+
+  .stars {
+    @include moon($dark: false, $stars: true);
+  }
+}
+
+// ---------- THEME BUTTON ----------
+.themeBtn {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  transition: $fast-transition;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  position: relative;
+}
+
+// ---------- HOVER STATE ----------
+.themeBtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  transition: $fast-transition;
+  border: 1px solid var(--secondary-color);
+
+  .hill {
+    opacity: 1;
+  }
+
+  .stars,
+  .clouds {
+    opacity: 1;
+  }
+
+  .star1,
+  .star2,
+  .star3 {
+    background-color: var(--main-color);
+    opacity: 1;
+  }
+
+  .cloud1Wrapper {
+    animation-name: driftLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  .cloud2Wrapper {
+    animation-name: driftRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+
+// ---------- SUN/MOON ICONS ----------
+.sun,
+.moon {
+  position: absolute;
+  left: calc(50% - .8rem);
+  top: calc(50% - .8rem);
+  transition: $transition;
+  opacity: 0;
+}
+
+// ---------- HILL ----------
+.hill {
+  background-color: var(--main-color);
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  border-radius: 50%;
+  top: 80%;
+  opacity: 0;
+  transition: $transition;
+  z-index: 1;
+}
+
+// ---------- STAR/CLOUD WRAPPERS ----------
+.stars,
+.clouds {
+  opacity: 0;
+  position: absolute;
+  transition: $transition;
+}
+
+
+// ---------- INDIVIDUAL STARS ----------
+.star1,
+.star2,
+.star3 {
+  background-color: var(--font-color);
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  position: relative;
+  opacity: 0;
+  transition: $transition;
+}
+
+@mixin twinkle($duration) {
+  animation-name: twinkle;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.star1 {
+  left: 2.6rem;
+  bottom: .4rem;
+  @include twinkle(2s)
+}
+
+.star2 {
+  bottom: 1.4rem;
+  left: .8rem;
+  @include twinkle(1.5s)
+}
+
+.star3 {
+  bottom: .2rem;
+  left: .5rem;
+  @include twinkle(2.5s)
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(1.1);
+    opacity: .5;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  75% {
+    transform: scale(.9);
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// ---------- INDIVIDUAL CLOUDS ----------
+
+.cloud1Wrapper {
+  position: relative;
+  bottom: 1.1rem;
+  left: .4rem;
+  animation-name: driftBackLeft;
+  animation-duration: 2s;
+}
+
+.cloud2Wrapper {
+  position: relative;
+  bottom: .7rem;
+  left: 1.2rem;
+  animation-name: driftBackRight;
+  animation-duration: 2s;
+}
+
+.cloud1Border,
+.cloud2Border {
+  color: var(--secondary-color);
+  position: absolute;
+  transform: scale(1.1);
+}
+
+.cloud2Border {
+  transform: scaleX(-1.1) scaleY(1.1);
+}
+
+.cloud2 {
+  transform: scaleX(-1);
+}
+
+.cloud1,
+.cloud2 {
+  position: absolute;
+}
+
+@keyframes driftLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-1.8rem);
+  }
+}
+
+@keyframes driftRight {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(1.5rem);
+  }
+}
+
+@keyframes driftBackRight {
+  from {
+    transform: translateX(1.5rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes driftBackLeft {
+  from {
+    transform: translateX(-1.8rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

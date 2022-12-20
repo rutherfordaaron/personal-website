@@ -1,0 +1,77 @@
+.cardWrapper {
+  --height: 210px;
+  --width: 330px;
+  --n: calc(210px - 50px);
+  --translate: calc(var(--n) * -1);
+  height: var(--height);
+  width: var(--width);
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
+  height: var(--height);
+  width: var(--width);
+  overflow-y: hidden;
+}
+
+.cardContent {
+  position: absolute;
+  top: calc(var(--height) - 50px);
+  background-color: var(--card-content-background);
+  z-index: 30;
+  padding: 2px 10px;
+  width: calc(var(--width) - 20px);
+  min-height: var(--height);
+  transition-duration: .2s;
+  box-shadow: 0 -5px 5px hsla(0, 0%, 0%, 5%);
+  overflow-y: hidden;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.captionWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  margin-top: 0px;
+}
+
+.showContent {
+  transform: translateY(var(--translate));
+  overflow-y: scroll;
+}
+
+.carrotIcon {
+  height: 20px;
+  width: auto;
+}
+
+.caret,
+.link img {
+  transition: .2s;
+}
+
+.caret:hover {
+  cursor: pointer;
+}
+
+.caretFlip {
+  transform: rotate(180deg);
+}
+
+.link img:hover {
+  transform: scale(1.18);
+}
+
+.descriptionLink {
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+
+.descriptionLink:hover {
+  opacity: .6;
+}

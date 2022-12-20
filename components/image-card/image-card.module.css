@@ -1,0 +1,47 @@
+.card {
+  aspect-ratio: .75;
+  position: relative;
+  transform-style: preserve-3d;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--secondary-color);
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, .2);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.cardBack {
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-2px) rotateY(180deg);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cardBack p {
+  margin: 1rem .5rem;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.divider {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-1px) rotateY(180deg);
+  background-color: var(--main-color);
+  border-radius: 20px;
+}
