@@ -22,7 +22,7 @@ const About = () => {
         <motion.h1 {...motionProps}>About Me</motion.h1>
         <article className={styles.about}>
           <div clssName={styles.content1}>
-            <motion.p {...motionProps}>Me and my wife, Harmony, live in the Roseway neighborhood of NE Portland, Oregon. We moved here from Utah in Novemeber of 2021 for a change of environment and a more vaired job market. My wife is an amazing baker and quite the bookworm. We have a small bookshelf in our apartemnt that is always completely filled with books from the library.</motion.p>
+            <motion.p {...motionProps}>Me and my wife, Harmony, live in the Kerns neighborhood of Portland, Oregon. We moved here from Utah in Novemeber of 2021 for a change of environment and a more varied job market. My wife is an amazing baker and quite the bookworm. We have a small bookshelf in our apartemnt that is always completely filled with books from the library.</motion.p>
 
             <motion.p {...motionProps}>Our fluffball's name is Lucy, and she's very vocal in the mornings if you forget to give her some good play time. We found her in a nearby pet shop when we moved here to Portland and instantly fell in love with her. She loves to push boundaries and see what she can get away with, but she's also incredibly snuggly and loves watching movies with us.</motion.p>
 
