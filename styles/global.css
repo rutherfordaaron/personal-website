@@ -3,3 +3,19 @@
 @tailwind utilities;
 
 @layer components {}
+
+.wave {
+  position: absolute;
+  bottom: 50vh;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  transform: rotateY(180deg);
+}
