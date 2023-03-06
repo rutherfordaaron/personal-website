@@ -14,7 +14,7 @@ const Home = () => {
           <div className="bg-indigo-600 w-[40px] h-[300px] absolute top-[70px] right-[51px] rounded-tl-[100%] rounded-tr-[2px] broder-l-indigo-700 border-r-indigo-700" />
         </div>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam eum voluptatibus veniam ea nam tempora, eius quibusdam commodi accusantium suscipit minima sint error dignissimos?</p>
+        <p className="w-52 text-center text-xl relative left-10 top-24">Make a <span className="relative p-2 splash">splash</span> with a site that's designed and developed by the best.</p>
 
         {/* Wave border */}
         <div className="wave">
@@ -24,8 +24,8 @@ const Home = () => {
         </div>
 
         {/* Indigo section under the wave */}
-        <div className="h-[50vh] w-screen bg-indigo-600 absolute bottom-0">
-
+        <div className="h-[50vh] w-screen bg-indigo-600 absolute bottom-0 text-slate-100">
+          <p className="relative left-28 top-10 text-lg text-center w-52">Hello world</p>
         </div>
       </section>
     </article>
