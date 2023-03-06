@@ -6,12 +6,13 @@
 
 @layer components {
   p {
-    @apply text-lg;
+    @apply text-lg tracking-wide;
   }
 }
 
 html {
   font-family: 'Fredoka One', cursive;
+  font-weight: 300;
 }
 
 .wave {
