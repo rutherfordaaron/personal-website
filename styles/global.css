@@ -34,11 +34,7 @@ html {
 .splash::before {
   content: "";
   position: absolute;
-  height: 120px;
-  width: 120px;
   background: url(/splash.svg) no-repeat center center/cover;
   opacity: 1;
-  bottom: -45px;
-  left: -33px;
   z-index: -1;
 }
