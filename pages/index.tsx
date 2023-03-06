@@ -5,10 +5,10 @@ const Home = () => {
   return (
     <article>
       {/* ---------- Landing Section ---------- */}
-      <section className="relative h-screen overflow-x-hidden">
+      <section className="relative overflow-hidden">
         {/* Bucket container */}
-        <div className="absolute -z-10 top-10 right-2 scale-[100%] 
-        md:scale-[150%] md:top-24 md:right-36">
+        <div className="absolute -z-10 top-10 md:top-10 right-2 origin-top scale-[200%] 
+        md:scale-[300%] md:right-32 lg:scale-[350%]">
           <img src="/bucket.svg" alt="" className="w-40 h-80" />
         </div>
 
@@ -18,7 +18,7 @@ const Home = () => {
         </div>
 
         {/* Wave border */}
-        <div className="wave">
+        <div className="wave relative top-1">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="h-[100px]">
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-indigo-600"></path>
           </svg>
@@ -26,7 +26,7 @@ const Home = () => {
 
         {/* Indigo section under the wave */}
         <div className="w-screen bg-indigo-600 block text-slate-100">
-          <div className="max-w-[900px] mx-auto pb-10 px-10">
+          <div className="max-w-[900px] mx-auto pb-10 px-9">
             {/* Text block 2 */}
             <div className="flex justify-center pt-10">
               <p className="text-center text-lg md:text-3xl md:w-auto lg:pt-5">I pour on the skills and creativity to increase your web presence. With design and development services, get a website that really stands out.</p>
