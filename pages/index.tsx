@@ -5,15 +5,16 @@ const Home = () => {
   return (
     <article>
       {/* ---------- Landing Section ---------- */}
-      <section className="relative h-screen">
+      <section className="relative h-screen overflow-x-hidden">
         {/* Bucket container */}
-        <div className="absolute top-24 right-2 md:right-12 lg:right-60 scale-[200%] -z-10">
-          <img src="/bucket.svg" alt="" className="w-40 h-40" />
+        <div className="absolute -z-10 top-10 right-2 scale-[100%] 
+        md:scale-[150%] md:top-24 md:right-36">
+          <img src="/bucket.svg" alt="" className="w-40 h-80" />
         </div>
 
         {/* Text block 1 */}
-        <div className="max-w-[800px] mx-auto flex pl-2 pt-28 md:pt-20">
-          <p className="w-56 text-center text-lg md:w-96 md:text-3xl">Make a <span className="relative p-2 splash before:w-36 before:h-36 before:bottom-[-60px] before:left-[-40px]">splash</span> with a website that's designed and developed by the best.</p>
+        <div className="max-w-[800px] mx-auto flex pl-2 pt-28 mb-10 md:mb-28 md:pt-20 md:pl-24 lg:justify-center lg:px-0 lg:pt-36">
+          <h1 className="w-56 text-center text-lg md:w-96 md:text-3xl lg:text-4xl lg:w-[450px] xl:w-auto">Make a <span className="relative p-2 splash before:w-36 before:h-36 before:bottom-[-60px] before:left-[-40px]">splash</span> with a website that's designed and developed by the best.</h1>
         </div>
 
         {/* Wave border */}
@@ -24,11 +25,11 @@ const Home = () => {
         </div>
 
         {/* Indigo section under the wave */}
-        <div className="h-[50vh] w-screen bg-indigo-600 absolute block bottom-0 text-slate-100">
-          <div className="mx-auto pb-10 px-10">
+        <div className="w-screen bg-indigo-600 block text-slate-100">
+          <div className="max-w-[900px] mx-auto pb-10 px-10">
             {/* Text block 2 */}
             <div className="flex justify-center pt-10">
-              <p className="text-center text-lg md:w-96 md:text-3xl">I pour on the skills and creativity to increase your web presence. With design and development services, get a website that really stands out.</p>
+              <p className="text-center text-lg md:text-3xl md:w-auto lg:pt-5">I pour on the skills and creativity to increase your web presence. With design and development services, get a website that really stands out.</p>
             </div>
             {/* Action button */}
             <div className="flex justify-center items-center pt-10">

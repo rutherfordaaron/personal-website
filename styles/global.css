@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 @layer components {
-  p {
-    @apply text-lg tracking-wide;
+  html {
+    @apply tracking-wider;
   }
 }
 
@@ -16,8 +16,6 @@ html {
 }
 
 .wave {
-  position: absolute;
-  bottom: 50vh;
   left: 0;
   width: 100%;
   overflow: hidden;
