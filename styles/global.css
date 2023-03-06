@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {}
+@layer components {
+  p {
+    @apply text-lg;
+  }
+}
 
 html {
-  font-family: 'Golos Text', sans-serif;
-  font-weight: 500;
+  font-family: 'Fredoka One', cursive;
 }
 
 .wave {
@@ -30,13 +33,11 @@ html {
 .splash::before {
   content: "";
   position: absolute;
-  /* background-color: red; */
   height: 120px;
   width: 120px;
   background: url(/splash.svg) no-repeat center center/cover;
   opacity: 1;
   bottom: -45px;
-  left: -30px;
+  left: -33px;
   z-index: -1;
-  /* display: block; */
 }
