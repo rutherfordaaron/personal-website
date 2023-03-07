@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {}
+@layer components {
+  html {
+    @apply tracking-wider;
+  }
+}
+
+html {
+  font-family: 'Fredoka One', cursive;
+  font-weight: 300;
+}
+
+.wave {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  transform: rotateY(180deg);
+}
+
+.splash::before {
+  content: "";
+  position: absolute;
+  background: url(/splash.svg) no-repeat center center/cover;
+  opacity: 1;
+  z-index: -1;
+}
