@@ -38,7 +38,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       {/* ---------- Services Section ---------- */}
+      <section className="bg-gradient-to-b from-indigo-600 to-violet-600">
+
+      </section>
       {/* ---------- Work Proof Section ---------- */}
     </article>
   )
