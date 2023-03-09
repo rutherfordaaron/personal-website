@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Service from "../components/service";
 
 const Home = () => {
   return (
@@ -26,22 +27,41 @@ const Home = () => {
 
         {/* Indigo section under the wave */}
         <div className="w-screen bg-indigo-600 block text-light relative -top-0">
-          <div className="max-w-[900px] mx-auto pb-10 px-9">
+          <div className="max-w-[900px] mx-auto px-9">
             {/* Text block 2 */}
             <div className="flex justify-center pt-10">
               <p className="text-center text-lg md:text-3xl md:w-auto lg:pt-5">I pour on the skills and creativity to increase your web presence. With design and development services, get a website that really stands out.</p>
             </div>
             {/* Action button */}
-            <div className="flex justify-center items-center pt-10">
-              <Link legacyBehavior={false} href="/" className="block border-4 border-slate-700 bg-indigo-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-200 hover:text-black md:text-3xl md:py-7 md:px-12">Get a Website</Link>
+            <div className="flex justify-center items-center py-16">
+              <Link legacyBehavior={false} href="/" className="block border-4 border-slate-700 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get a Website</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* ---------- Services Section ---------- */}
-      <section className="bg-gradient-to-b from-indigo-600 to-violet-600">
+      <section className="bg-gradient-to-b from-indigo-600 to-violet-600 text-light py-4">
+        <Service
+          src="/service icons/design.svg"
+          text="Not sure how you want it to look yet? I’ll help you find the perfect design."
+          className=""
+          alt=""
+        />
 
+        <Service
+          src="/service icons/development.svg"
+          text="Already have an image in your  head? I’ll help you make that image a reality."
+          className="flex-row-reverse"
+          alt=""
+        />
+
+        <Service
+          src="/service icons/management.svg"
+          text="Have an existing site? I’ll help you update it, or add content."
+          className=""
+          alt=""
+        />
       </section>
       {/* ---------- Work Proof Section ---------- */}
     </article>
