@@ -6,7 +6,15 @@
 
 @layer components {
   html {
-    @apply tracking-wider;
+    @apply tracking-wider text-slate-800;
+  }
+
+  .text-light {
+    @apply text-slate-100;
+  }
+
+  .text-dark {
+    @apply text-slate-800;
   }
 }
 
@@ -16,7 +24,9 @@ html {
 }
 
 .wave {
-  width: 100%;
+  width: 110%;
+  position: relative;
+  left: -4px;
   overflow: hidden;
   line-height: 0;
 }
