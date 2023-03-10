@@ -35,7 +35,7 @@ const Home = () => {
 
             {/* Action button */}
             <div className="flex justify-center items-center py-16">
-              <Link legacyBehavior={false} href="/" className="block border-4 border-slate-800 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get a Website</Link>
+              <Link legacyBehavior={false} href="/" className="block border-4 md:border-[6px] border-slate-800 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get a Website</Link>
             </div>
           </div>
         </div>

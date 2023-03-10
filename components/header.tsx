@@ -11,11 +11,11 @@ const Header = () => {
       let currentScrollPos = window.pageYOffset;
       let navToggle = document.getElementById("nav-toggle");
       if (prevScrollpos > currentScrollPos && navToggle) {
-        console.log("going up")
-        navToggle.style.top = "20px"
+        navToggle.classList.add("nav-button-show");
+        navToggle.classList.remove("nav-button-hidden");
       } else {
-        console.log("going down")
-        navToggle.style.top = "-60px"
+        navToggle.classList.remove("nav-button-show");
+        navToggle.classList.add("nav-button-hidden");
       }
       prevScrollpos = currentScrollPos;
     }
@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header id="navbar" className="fixed z-50 flex items-center justify-between shadow-xl transition-all duration-300 text-dark">
-      <button type="button" id="nav-toggle" className="fixed right-5 z-50 transition-all duration-300 text-dark text-2xl bg-slate-200 border-4 rounded-full w-14 h-14 border-slate-800 text-dark"><FontAwesomeIcon icon={faBars} /></button>
+      <button type="button" id="nav-toggle" className="fixed left-5 md:left-8 nav-button-show z-50 transition-all duration-300 text-dark text-2xl bg-slate-200 border-4 md:border-[6px] rounded-full w-14 h-14 border-slate-800 text-dark hover:scale-110 md:w-20 md:h-20 md:text-3xl"><FontAwesomeIcon icon={faBars} /></button>
     </header>
   )
 }
