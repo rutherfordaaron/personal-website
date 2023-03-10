@@ -16,6 +16,24 @@
   .text-dark {
     @apply text-slate-800;
   }
+
+  .nav-button-show {
+    @apply top-5;
+  }
+
+  .nav-button-hidden {
+    @apply top-[-60px];
+  }
+
+  @media (min-width: 768px) {
+    .nav-button-show {
+      @apply top-8
+    }
+
+    .nav-button-hidden {
+      @apply top-[-80px];
+    }
+  }
 }
 
 html {
