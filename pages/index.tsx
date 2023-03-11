@@ -70,6 +70,12 @@ const Home = () => {
           className="flex-row-reverse"
           alt=""
         />
+
+        <p className="text-center text-2xl md:text-3xl md:pt-8">Welcome to your one-stop-shop for all your website needs.</p>
+
+        <div className="flex justify-center items-center py-8">
+          <Link legacyBehavior={false} href="/" className="block border-4 md:border-[6px] border-slate-800 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get in Touch</Link>
+        </div>
       </section>
       {/* ---------- Work Proof Section ---------- */}
     </article>
