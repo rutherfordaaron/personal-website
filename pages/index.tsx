@@ -43,33 +43,35 @@ const Home = () => {
 
       {/* ---------- Services Section ---------- */}
       <section className="bg-gradient-to-b from-indigo-600 to-violet-600 text-light pb-4">
-        <Service
-          src="/service icons/design.svg"
-          text="Not sure how you want it to look yet? I’ll help you find the perfect design."
-          className=""
-          alt=""
-        />
+        <div className="md:grid grid-cols-2 md:gap-8 max-w-[1000px] mx-auto md:px-5">
+          <Service
+            src="/service icons/design.svg"
+            text="Not sure how you want it to look yet? I’ll help you find the perfect design."
+            className=""
+            alt=""
+          />
 
-        <Service
-          src="/service icons/development.svg"
-          text="Already have an image in your  head? I’ll help you make that image a reality."
-          className="flex-row-reverse"
-          alt=""
-        />
+          <Service
+            src="/service icons/development.svg"
+            text="Already have an image in your  head? I’ll help you make that image a reality."
+            className="flex-row-reverse"
+            alt=""
+          />
 
-        <Service
-          src="/service icons/management.svg"
-          text="Have an existing site? I’ll help you update it, or add content."
-          className=""
-          alt=""
-        />
+          <Service
+            src="/service icons/management.svg"
+            text="Have an existing site? I’ll help you update it, or add content."
+            className=""
+            alt=""
+          />
 
-        <Service
-          src="/service icons/fullstack.svg"
-          text="Need something more complex? I can leverage APIs and databases to make your site shine!"
-          className="flex-row-reverse"
-          alt=""
-        />
+          <Service
+            src="/service icons/fullstack.svg"
+            text="Need something more complex? I can leverage APIs and databases to make your site shine!"
+            className="flex-row-reverse"
+            alt=""
+          />
+        </div>
 
         <p className="text-center text-2xl md:text-3xl md:pt-8">Welcome to your one-stop-shop for all your website needs.</p>
 
