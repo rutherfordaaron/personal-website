@@ -77,7 +77,7 @@ const Home = () => {
           <p className="text-center text-2xl md:text-3xl md:pt-8">Welcome to your one-stop-shop for all your website needs.</p>
 
           <div className="flex justify-center items-center py-8">
-            <LinkButton href="/contact" text="Get in Touch" />
+            <LinkButton href="/contact" text="See Services" />
           </div>
         </section>
         {/* ---------- Work Proof Section ---------- */}
