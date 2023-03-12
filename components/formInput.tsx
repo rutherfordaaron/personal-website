@@ -20,14 +20,14 @@ const FormInput = (props: { label: string, type: string, state: string, setState
     return (
       <div className={inputContainer}>
         <label htmlFor={props.label} className={`${label} ${props.state ? activeLabel : inactiveLabel}`}>{props.label}</label>
-        <input type={props.type} id={props.label} className={`${input} ${props.state ? activeInput : inactiveInput}`} onChange={e => props.setState(e.target.value)} />
+        <input type={props.type} id={props.label} className={`${input} ${props.state ? activeInput : inactiveInput}`} onChange={e => props.setState(e.target.value)} value={props.state} />
       </div>
     )
   } else {
     return (
       <div className={`pt-2 ${inputContainer}`}>
         <label htmlFor="textarea" className={`${label} ${props.state ? activeTextAreaLabel : inactiveTextAreaLabel}`}>{props.label}</label>
-        <textarea id={props.label} className={`${textArea} ${props.state ? activeInput : inactiveInput}`} onChange={e => props.setState(e.target.value)}></textarea>
+        <textarea id={props.label} className={`${textArea} ${props.state ? activeInput : inactiveInput}`} onChange={e => props.setState(e.target.value)} value={props.state}></textarea>
       </div>
     )
   }
