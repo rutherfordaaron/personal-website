@@ -14,7 +14,7 @@ const Header = () => {
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset;
       let navToggle = document.getElementById("nav-toggle");
-      if (prevScrollpos > currentScrollPos && navToggle) {
+      if (prevScrollpos > currentScrollPos || window.scrollY < 250) {
         navToggle.classList.add("nav-button-show");
         navToggle.classList.remove("nav-button-hidden");
       } else {
@@ -76,9 +76,11 @@ const Header = () => {
         variants={menuVariants}
         initial="inactive"
         animate={showMenu ? "active" : "exit"}
+        onClick={toggleNav}
       >
         <NavLink href="/" text="Home" />
         <NavLink href="/contact" text="Get a Website" />
+        <NavLink href="/services" text="Services" />
         <NavLink href="/process" text="My Process" />
         <NavLink href="/work" text="My Work" />
         <NavLink href="/about" text="About Me" />
