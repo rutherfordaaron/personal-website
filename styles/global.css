@@ -9,6 +9,10 @@
     @apply tracking-wider text-slate-800;
   }
 
+  p {
+    @apply my-5;
+  }
+
   .text-light {
     @apply text-slate-100;
   }

@@ -1,14 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 import Service from "../components/service";
+import LinkButton from "../components/linkButton";
 
 const Home = () => {
   return (
     <article>
       {/* ---------- Landing Section ---------- */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-violet-200">
         {/* Bucket container */}
-        <div className="absolute -z-10 top-10 right-2 origin-top scale-[200%] 
+        <div className="absolute top-10 right-2 origin-top scale-[200%] 
         md:scale-[300%] md:right-32 md:-top-12 lg:right-24">
           <img src="/bucketfall.svg" alt="" className="w-40 h-80" />
         </div>
@@ -35,34 +35,49 @@ const Home = () => {
 
             {/* Action button */}
             <div className="flex justify-center items-center py-16">
-              <Link legacyBehavior={false} href="/" className="block border-4 md:border-[6px] border-slate-800 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get a Website</Link>
+              <LinkButton href="/contact" text="Get a Website" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ---------- Services Section ---------- */}
-      <section className="bg-gradient-to-b from-indigo-600 to-violet-600 text-light py-4">
-        <Service
-          src="/service icons/design.svg"
-          text="Not sure how you want it to look yet? I’ll help you find the perfect design."
-          className=""
-          alt=""
-        />
+      <section className="bg-gradient-to-b from-indigo-600 to-violet-600 text-light pb-4">
+        <div className="md:grid grid-cols-2 md:gap-8 max-w-[1000px] mx-auto md:px-5">
+          <Service
+            src="/service icons/design.svg"
+            text="Not sure how you want it to look yet? I’ll help you find the perfect design."
+            className=""
+            alt=""
+          />
 
-        <Service
-          src="/service icons/development.svg"
-          text="Already have an image in your  head? I’ll help you make that image a reality."
-          className="flex-row-reverse"
-          alt=""
-        />
+          <Service
+            src="/service icons/development.svg"
+            text="Already have an image in your  head? I’ll help you make that image a reality."
+            className="flex-row-reverse"
+            alt=""
+          />
 
-        <Service
-          src="/service icons/management.svg"
-          text="Have an existing site? I’ll help you update it, or add content."
-          className=""
-          alt=""
-        />
+          <Service
+            src="/service icons/management.svg"
+            text="Have an existing site? I’ll help you update it, or add content."
+            className=""
+            alt=""
+          />
+
+          <Service
+            src="/service icons/fullstack.svg"
+            text="Need something more complex? I can leverage APIs and databases to make your site shine!"
+            className="flex-row-reverse"
+            alt=""
+          />
+        </div>
+
+        <p className="text-center text-2xl md:text-3xl md:pt-8">Welcome to your one-stop-shop for all your website needs.</p>
+
+        <div className="flex justify-center items-center py-8">
+          <LinkButton href="/contact" text="Get in Touch" />
+        </div>
       </section>
       {/* ---------- Work Proof Section ---------- */}
     </article>
