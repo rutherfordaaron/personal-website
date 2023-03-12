@@ -11,7 +11,7 @@ const FormInput = (props: { label: string, type: string, state: string, setState
   const activeLabel = "text-xs bottom-[28px] left-0 text-indigo-300";
   const label = "transition-all absolute"
 
-  const textArea = "bg-transparent border-[2mm] border-slate-800 rounded-2xl p-2 focus:outline-none focus:border-indigo-300 transition-all min-w-[250px] min-h-[250px] md:w-[550px]"
+  const textArea = "bg-transparent border-[2mm] border-slate-800 rounded-2xl p-2 focus:outline-none focus:border-indigo-300 transition-all min-w-[250px] min-h-[250px] md:w-[550px] resize-none"
 
   const inactiveTextAreaLabel = "top-[23px] left-[20px]"
   const activeTextAreaLabel = "text-xs top-[-15px] left-[12px] text-indigo-300"
