@@ -1,6 +1,7 @@
 import Main from "../components/main";
 import FormInput from "../components/formInput";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -22,8 +23,13 @@ const Contact = () => {
 
   return (
     <Main>
-      <article className="p-8 max-w-[800px] mx-auto">
-        <h1>Contact me</h1>
+      <article className="p-8 max-w-[800px] mx-auto mt-8">
+        <h1 className="text-3xl text-center">Contact me</h1>
+
+        <p className="text-justify">Congratulations on taking the first step for taking your web presence to the next level! I'm excited to help you with your project. Fill out the form below to reach me. Include in your message a general overview of what you want in your website and general plans to give me some context of your goals. Also, feel free to connect with me on <Link legacyBehavior={false} className="underline" href="https://www.linkedin.com/in/aaron-rutherford-67aaa917a/">LinkedIn</Link>.</p>
+
+        <p className="text-justify">I'll reach out to you within a day or so and let you know what kind of work goes into the project you're looking for as well as an estimated price for the whole project, and we'll go from there!</p>
+
         <div className="flex items-center justify-center">
           <form id="contact-me-form" className="max-w-[800px] my-8 border-[2mm] bg-indigo-600 border-slate-800 rounded-3xl p-8 text-light flex flex-col items-center justify-center gap-8">
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
