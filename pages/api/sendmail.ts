@@ -14,6 +14,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       const send = async () => {
         let transporter = nodemailer.createTransport({
+          //@ts-ignore
           service: "gmail",
           auth: {
             type: "OAuth2",
