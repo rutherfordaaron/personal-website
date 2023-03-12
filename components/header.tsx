@@ -76,6 +76,7 @@ const Header = () => {
         variants={menuVariants}
         initial="inactive"
         animate={showMenu ? "active" : "exit"}
+        onClick={toggleNav}
       >
         <NavLink href="/" text="Home" />
         <NavLink href="/contact" text="Get a Website" />
