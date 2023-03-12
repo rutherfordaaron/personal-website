@@ -13,7 +13,7 @@ const NavLink = (props: { href: string, text: string }) => {
       variants={linkVariants}
       whileHover={{ scale: 1.1, originX: 0 }}
     >
-      <Link legacyBehavior={false} href={props.href}>{props.text}</Link>
+      <Link legacyBehavior={false} scroll={false} href={props.href}>{props.text}</Link>
     </motion.div>
   )
 }
