@@ -14,7 +14,7 @@ const Header = () => {
     window.onscroll = function () {
       let currentScrollPos = window.pageYOffset;
       let navToggle = document.getElementById("nav-toggle");
-      if (prevScrollpos > currentScrollPos && navToggle) {
+      if (prevScrollpos > currentScrollPos || window.scrollY < 500) {
         navToggle.classList.add("nav-button-show");
         navToggle.classList.remove("nav-button-hidden");
       } else {
