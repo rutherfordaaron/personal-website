@@ -5,7 +5,7 @@ const Main = ({ children }) => {
   const mainVariants = {
     initial: { opacity: 0, x: 0, y: 0 },
     enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: 0, y: 0, scrollY: window.scrollY },
+    exit: { opacity: 0, x: 0, y: 0 },
   }
 
   return (
