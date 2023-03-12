@@ -1,14 +1,14 @@
-import Image from "next/image";
 import Link from "next/link";
 import Service from "../components/service";
+import LinkButton from "../components/linkButton";
 
 const Home = () => {
   return (
     <article>
       {/* ---------- Landing Section ---------- */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-violet-200">
         {/* Bucket container */}
-        <div className="absolute -z-10 top-10 right-2 origin-top scale-[200%] 
+        <div className="absolute top-10 right-2 origin-top scale-[200%] 
         md:scale-[300%] md:right-32 md:-top-12 lg:right-24">
           <img src="/bucketfall.svg" alt="" className="w-40 h-80" />
         </div>
@@ -35,7 +35,7 @@ const Home = () => {
 
             {/* Action button */}
             <div className="flex justify-center items-center py-16">
-              <Link legacyBehavior={false} href="/" className="block border-4 md:border-[6px] border-slate-800 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get a Website</Link>
+              <LinkButton href="/contact" text="Get a Website" />
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ const Home = () => {
         <p className="text-center text-2xl md:text-3xl md:pt-8">Welcome to your one-stop-shop for all your website needs.</p>
 
         <div className="flex justify-center items-center py-8">
-          <Link legacyBehavior={false} href="/" className="block border-4 md:border-[6px] border-slate-800 bg-violet-200 px-10 py-5 rounded-full text-dark text-2xl tracking-wider shadow-lg hover:bg-violet-100 hover:text-black md:text-3xl md:py-7 md:px-12">Get in Touch</Link>
+          <LinkButton href="/contact" text="Get in Touch" />
         </div>
       </section>
       {/* ---------- Work Proof Section ---------- */}
