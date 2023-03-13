@@ -1,4 +1,4 @@
-// Animation components
+import Footer from "./footer"
 import { motion } from "framer-motion"
 
 const Main = ({ children }) => {
@@ -9,15 +9,18 @@ const Main = ({ children }) => {
   }
 
   return (
-    <motion.main
-      variants={mainVariants}
-      initial="initial"
-      animate="enter"
-      exit="exit"
-      transition={{ type: 'linear', duration: 0.5 }}
-    >
-      {children}
-    </motion.main>
+    <>
+      <motion.main
+        variants={mainVariants}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        transition={{ type: 'linear', duration: 0.5 }}
+      >
+        {children}
+      </motion.main>
+      <Footer />
+    </>
   )
 }
 
