@@ -31,7 +31,7 @@ const Projects = () => {
             <motion.h2 {...motionProps}>Current Project and Future Plans</motion.h2>
             <motion.p {...motionProps}>Right now, I'm currently working on my first fullstack web application. It's going to be a social, recipe sharing application where users can upload and manage recipes in a digital cookbook, but can also share and discover recipes with other people. I also plan to implement meal planning features that will also generate a grocery list based on that meal plan. Then, you will get an estimated price, before you even go to the grocery store. <a href="https://github.com/Hazipan/recipe-box">See the project on Github.</a></motion.p>
 
-            <motion.p {...motionProps}>This project is still in its infancy. I'm currently implementing the ability to create new recipes on your account. Follow me on <a href="https://twitter.com/AaZRuth">Twitter</a> to watch the progress.</motion.p>
+            <motion.p {...motionProps}>This project is still in its early stages. I'm working on pushing a production ready beta version that allows users to create an account and create, view, update, and delete recipes. Follow me on <a href="https://twitter.com/AaZRuth">Twitter</a> to watch the progress.</motion.p>
           </section>
 
           <section>
