@@ -50,7 +50,7 @@ const Home = () => {
               </div>
 
               <div className={styles.intro}>
-                <motion.p {...motionProps}>My name is Aaron Rutherford, and I'm a full stack web developer. I'm completely self taught and have learned through a wide variety of resources: <a href="https://www.freecodecamp.org/">freeCodeCamp</a>, <a href="https://www.udemy.com/">Udemy</a>, YouTube, and a variety of forums. I started my web development journey in February of 2022, and I've come a long way. Take a look!</motion.p>
+                <motion.p {...motionProps}>My name is Aaron Rutherford, and I'm a full stack web developer. I'm completely self taught and have learned through a wide variety of resources: technical documentations, <a href="https://www.freecodecamp.org/">freeCodeCamp</a>, <a href="https://www.udemy.com/">Udemy</a>, YouTube, and a variety of forums. I started my web development journey in February of 2022, and I've come a long way. Take a look!</motion.p>
               </div>
             </div>
           </section>
