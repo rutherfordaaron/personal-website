@@ -1,8 +1,15 @@
 import Header from "../components/header";
+import Footer from "../components/footer";
 import "../styles/global.css";
 import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const App = ({ Component, pageProps, router }) => {
+  const mainVariants = {
+    initial: { opacity: 0, x: 0, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: 0 },
+  }
   return (
     <>
       <Header />
@@ -11,8 +18,19 @@ const App = ({ Component, pageProps, router }) => {
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <Component {...pageProps} key={router.pathname} />
+        <motion.main
+          variants={mainVariants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+          transition={{ type: 'linear', duration: 0.5 }}
+          className="max-w-[1200px] mx-auto"
+        >
+          <Component {...pageProps} key={router.pathname} />
+
+        </motion.main>
       </AnimatePresence>
+      <Footer />
     </>
   )
 }
