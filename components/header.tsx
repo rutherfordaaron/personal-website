@@ -69,7 +69,7 @@ const Header = () => {
   }
 
   return (
-    <header id="header" className={`bg-gray-200 shadow-lg fixed left-0 right-0 ${showHeader ? "top-0" : "-top-32"} transition-all duration-500 text-2xl px-4 py-3 flex justify-between items-center`}>
+    <header id="header" className={`bg-gray-200 shadow-lg fixed left-0 right-0 ${showHeader ? "top-0" : "-top-32"} transition-all duration-500 text-2xl px-4 py-3 flex justify-between items-center z-50`}>
       <Link href="/" className="italic hover:text-black text-gray-700" legacyBehavior={false}>aaronrutherford.dev</Link>
       <motion.nav
         id="nav"
