@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const NavLink = (props: { href: string, text: string }) => {
+  const router = useRouter();
+
   const linkVariants = {
     active: { opacity: 1, x: 0 },
     inactive: { opacity: 0, x: -15 },
@@ -9,11 +12,15 @@ const NavLink = (props: { href: string, text: string }) => {
   }
 
   return (
-    <motion.div
-      variants={linkVariants}
-      whileHover={{ scale: 1.1, originX: 0 }}
-    >
-      <Link legacyBehavior={false} scroll={false} href={props.href}>{props.text}</Link>
+    <motion.div variants={linkVariants}>
+      <Link
+        legacyBehavior={false}
+        scroll={false}
+        href={props.href}
+        className={`${router.asPath == props.href ? "text-black" : "text-gray-500"} transition-all hover:text-slate-800`}
+      >
+        {props.text}
+      </Link>
     </motion.div>
   )
 }
