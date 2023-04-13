@@ -76,39 +76,41 @@ const Header = () => {
 
   return (
     <header id="header" className={`bg-gray-200 shadow-lg fixed left-0 right-0 ${showHeader ? "top-0" : "-top-32"} transition-all duration-500 text-2xl px-4 py-3 flex justify-between items-center z-50`}>
-      {/* ---------- HOME LINK ---------- */}
-      <Link href="/" className="italic hover:text-black text-gray-700" legacyBehavior={false}>aaronrutherford.dev</Link>
+      <div className="max-w-[1200px] w-full mx-auto flex justify-between items-center">
+        {/* ---------- HOME LINK ---------- */}
+        <Link href="/" className="italic hover:text-black text-gray-700" legacyBehavior={false}>aaronrutherford.dev</Link>
 
-      {/* ---------- NAVIGATION CONTAINER ---------- */}
-      <motion.nav
-        id="nav"
-        variants={menuVariants}
-        initial="inactive"
-        animate={showMenu ? "active" : "exit"}
-        className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-gray-300 max-sm:shadow-2xl max-sm:p-4 max-sm:pr-16"
-        onClick={e => { if (window.screen.width <= 767) setShowMenu(!showMenu) }}
-      >
-        {/* Navigation links */}
-        <NavLink href="/#portfolio" text="Portfolio" />
-        <NavLink href="/about" text="About" />
-        <NavLink href="/contact" text="Contact" />
-
-        {/* Navigation close button (mobile only) */}
-        <button
-          onClick={e => setShowMenu(false)}
-          className="md:hidden absolute top-2 right-4 text-lg"
+        {/* ---------- NAVIGATION CONTAINER ---------- */}
+        <motion.nav
+          id="nav"
+          variants={menuVariants}
+          initial="inactive"
+          animate={showMenu ? "active" : "exit"}
+          className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-gray-300 max-sm:shadow-2xl max-sm:p-4 max-sm:pr-16"
+          onClick={e => { if (window.screen.width <= 767) setShowMenu(!showMenu) }}
         >
-          <FontAwesomeIcon icon={faX} />
-        </button>
-      </motion.nav>
+          {/* Navigation links */}
+          <NavLink href="/#portfolio" text="Portfolio" />
+          <NavLink href="/about" text="About" />
+          <NavLink href="/contact" text="Contact" />
 
-      {/* ---------- MOBILE NAVIGATION MENU TOGGLE (MOBILE ONLY) ---------- */}
-      <button
-        onClick={e => setShowMenu(!showMenu)}
-        className="md:hidden"
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+          {/* Navigation close button (mobile only) */}
+          <button
+            onClick={e => setShowMenu(false)}
+            className="md:hidden absolute top-2 right-4 text-lg"
+          >
+            <FontAwesomeIcon icon={faX} />
+          </button>
+        </motion.nav>
+
+        {/* ---------- MOBILE NAVIGATION MENU TOGGLE (MOBILE ONLY) ---------- */}
+        <button
+          onClick={e => setShowMenu(!showMenu)}
+          className="md:hidden"
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
     </header>
   )
 }
