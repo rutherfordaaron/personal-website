@@ -9,6 +9,10 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
+  /** When the page first loads, create an onscroll event listener to show/hide the header
+   *  depending on the scroll position.
+   *  Also, ensure that the navigation menu starts off as shown on larger-than-mobile screens
+   */
   useEffect(() => {
     /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
     let prevScrollpos = window.pageYOffset;
@@ -24,9 +28,11 @@ const Header = () => {
       prevScrollpos = currentScrollPos;
     }
 
+    // Always show the navigation menu on larger screens
     if (window.screen.width > 767) setShowMenu(true)
   }, [])
 
+  // Variants for orchestrating animations with framer-motion
   const menuVariants = {
     active: {
       opacity: 1,
@@ -70,7 +76,10 @@ const Header = () => {
 
   return (
     <header id="header" className={`bg-gray-200 shadow-lg fixed left-0 right-0 ${showHeader ? "top-0" : "-top-32"} transition-all duration-500 text-2xl px-4 py-3 flex justify-between items-center z-50`}>
+      {/* ---------- HOME LINK ---------- */}
       <Link href="/" className="italic hover:text-black text-gray-700" legacyBehavior={false}>aaronrutherford.dev</Link>
+
+      {/* ---------- NAVIGATION CONTAINER ---------- */}
       <motion.nav
         id="nav"
         variants={menuVariants}
@@ -79,10 +88,12 @@ const Header = () => {
         className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-gray-300 max-sm:shadow-2xl max-sm:p-4 max-sm:pr-16"
         onClick={e => { if (window.screen.width <= 767) setShowMenu(!showMenu) }}
       >
+        {/* Navigation links */}
         <NavLink href="/#portfolio" text="Portfolio" />
         <NavLink href="/about" text="About" />
         <NavLink href="/contact" text="Contact" />
 
+        {/* Navigation close button (mobile only) */}
         <button
           onClick={e => setShowMenu(false)}
           className="md:hidden absolute top-2 right-4 text-lg"
@@ -91,6 +102,7 @@ const Header = () => {
         </button>
       </motion.nav>
 
+      {/* ---------- MOBILE NAVIGATION MENU TOGGLE (MOBILE ONLY) ---------- */}
       <button
         onClick={e => setShowMenu(!showMenu)}
         className="md:hidden"
