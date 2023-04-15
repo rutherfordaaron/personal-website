@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Carousel from "../components/carousel/carousel";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
 
       {/* ---------- Tool Carousel Section ---------- */}
       <section>
+        <Carousel />
       </section>
 
       {/* ---------- Projects Section ---------- */}
