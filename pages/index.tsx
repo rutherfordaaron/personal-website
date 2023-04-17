@@ -40,9 +40,9 @@ const Home = () => {
         </div>
 
         <div className="my-8 flex gap-10 max-md:flex-col items-center flex-row-reverse">
-          <ProjectCard src="/screenshots/e-commerce.png" alt="static e-commerce project" href="https://hazipan.github.io/e-commerce-page/" />
+          <ProjectCard src="/screenshots/la-buca.png" alt="La Buca website" href="https://la-buca-italian-cafe.vercel.app/" />
           <div>
-            <h3>Static E-Commerce Page</h3>
+            <h3>La Buca, Redesigned</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
@@ -56,9 +56,25 @@ const Home = () => {
         </div>
 
         <div className="my-8 flex gap-10 max-md:flex-col items-center flex-row-reverse">
-          <ProjectCard src="/screenshots/rock-paper-scissors.png" alt="rock paper scissors project" href="https://hazipan.github.io/https://hazipan.github.io/rock-paper-scissors-lizard-spock/" />
+          <ProjectCard src="/screenshots/rock-paper-scissors.png" alt="rock paper scissors project" href="https://hazipan.github.io/rock-paper-scissors-lizard-spock/" />
           <div>
             <h3>Rock, Paper, Scissors, Lizard, Spock</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <div className="my-8 flex gap-10 max-md:flex-col items-center">
+          <ProjectCard src="/screenshots/tip-calc.png" alt="tip splitter project" href="https://hazipan.github.io/tip-calc/" />
+          <div>
+            <h3>Tip Splitter</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+
+        <div className="my-8 flex gap-10 max-md:flex-col items-center flex-row-reverse">
+          <ProjectCard src="/screenshots/todo.png" alt="todo project" href="https://hazipan.github.io/todo-app/" />
+          <div>
+            <h3>Todo</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
