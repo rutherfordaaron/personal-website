@@ -24,7 +24,7 @@ const App = ({ Component, pageProps, router }) => {
           animate="enter"
           exit="exit"
           transition={{ type: 'linear', duration: 0.5 }}
-          className="max-w-[1200px] mx-auto p-4 pt-24 text-justify"
+          className="max-w-[1200px] mx-auto p-4 md:p-16 md:pt-24 pt-24 text-justify"
         >
           <Component {...pageProps} key={router.pathname} />
 
