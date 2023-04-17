@@ -1,11 +1,20 @@
-import Image from "next/image";
 import Link from "next/link";
+import ProjectImage from "./projectImage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectCard = (props: { src: string, alt: string, href: string }) => {
+const ProjectCard = (props: { src: string, alt: string, href: string, githubHref: string, title: string, subtitle: string, body: JSX.Element, reverse?: boolean }) => {
+  const { src, alt, href, githubHref, title, subtitle, body, reverse } = props;
   return (
-    <Link href={props.href} className="hover:pointer hover:grayscale-0 relative block min-w-[300px] h-[200px] lg:min-w-[450px] lg:h-[300px] overflow-hidden shadow-lg filter grayscale-[50%] bg-gray-200" legacyBehavior={false}>
-      <Image src={props.src} alt={props.alt} layout="fill" className="hover:scale-110 transition-all" />
-    </Link>
+    <div className={`my-8 flex gap-10 max-md:flex-col-reverse items-center ${reverse ? "flex-row-reverse" : ""}`}>
+      <ProjectImage src={src} alt={alt} href={href} />
+      <div>
+        <h3><Link href={href}>{title}</Link></h3>
+        <p className="h3-sub">{subtitle}</p>
+        {body}
+        <Link href={githubHref} legacyBehavior={false}><p className="indent-0 pt-2">See it on GitHub. <FontAwesomeIcon className="opacity-75" icon={faExternalLink} /></p></Link>
+      </div>
+    </div>
   )
 }
 
