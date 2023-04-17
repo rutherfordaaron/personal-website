@@ -5,13 +5,10 @@ const CarouselItem = (props: { body: string, index: number }) => {
 
   const getStyle = () => {
     switch (index) {
-      case (0): return "scale-25 bg-gray-600 relative";
-      case (1): return "scale-50 bg-gray-600 relative left-24";
-      case (2): return "scale-75 bg-gray-500 relative left-12";
-      case (3): return "scale-100 bg-gray-400 relative left-0 right-0 z-40";
-      case (4): return "scale-125 bg-gray-300 relative z-50 left-0 right-0";
-      case (5): return "scale-100 bg-gray-400 relative left-0 right-0 z-40"
-      case (6): return "scale-75 bg-gray-500 relative right-12";
+      case (1): return "left-24";
+      case (2): return "left-12 z-30";
+      case (6): return "right-12 z-30";
+      default: return "z-40"
     }
   }
 
@@ -26,7 +23,7 @@ const CarouselItem = (props: { body: string, index: number }) => {
       case 3: return { scale: 1.25, x: 216, backgroundColor: "var(--primary)" }
       case 4: return { scale: 1, x: 216.01, backgroundColor: "var(--secondary)" }
       case 5: return { scale: .75, x: 168, backgroundColor: "var(--third)" }
-      case 6: return { scale: .5, x: 50, backgroundColor: "var(--fourth)" }
+      case 6: return { scale: .5, x: 118., backgroundColor: "var(--fourth)" }
     }
   }
 
@@ -84,7 +81,7 @@ const CarouselItem = (props: { body: string, index: number }) => {
 
   return (
     <motion.div
-      className={`w-44 h-24 flex justify-center items-center shadow-md shrink-0 ${getStyle()}`}
+      className={`w-44 h-24 flex justify-center items-center shadow-md shrink-0 relative ${getStyle()}`}
       animate={getAnimate()}
       transition={getTransition()}
       initial={getInitial()}

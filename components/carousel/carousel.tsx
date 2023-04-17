@@ -47,15 +47,15 @@ const Carousel = () => {
 
   return (
     <div className="relative h-48 overflow-hidden max-w-[800px] mx-auto flex gap-10 items-center justify-center">
-      <div className="z-50 absolute top-0 bottom-0 left-0 w-28 bg-gradient-to-r from-white to-white/0" />
-      <div className="flex justify-center items-center gap-10 relative right-56">
+      <div className="z-50 absolute top-0 bottom-0 left-0 max-sm:w-12 w-32 bg-gradient-to-r from-white to-white/0" />
+      <div className="flex justify-center items-center gap-10 relative right-[215px]">
         {carouselArr.map((el, i) => {
           return (
             <CarouselItem key={`carouselItem${el}`} body={el} index={i} />
           )
         })}
       </div>
-      <div className="z-50 absolute top-0 bottom-0 right-0 w-28 bg-gradient-to-l from-white to-white/0" />
+      <div className="z-50 absolute top-0 bottom-0 right-0 max-sm:w-12 w-32 bg-gradient-to-l from-white to-white/0" />
     </div>
   )
 }
