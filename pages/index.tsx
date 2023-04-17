@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Carousel from "../components/carousel/carousel";
 import ProjectCard from "../components/portfolio/projectCard";
 
@@ -34,16 +35,18 @@ const Home = () => {
         <div className="my-8 flex gap-10 max-md:flex-col items-center">
           <ProjectCard src="/screenshots/recipe-box.png" alt="recipe box project" href="https://recipe-box-phi.vercel.app/" />
           <div>
-            <h3>Recipe Box</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3><Link href="https://recipe-box-phi.vercel.app/">Recipe Box</Link></h3>
+            <p className="h3-sub">Digitize your recipe book with Recipe Box.</p>
+            <p>Recipe Box is a full stack application created using Next.js and TailwindCSS with a custom built authentication API and the ability to store user data by leveraging MongoDB. A few of its features include: a rating system for public recipes, an internal search engine for finding the right recipes, options for making recipes public or private, and easy to navigate froms. A labor of love, Recipe Box is continuously being updated and improved upon. More features are on their way, so check back often.</p>
           </div>
         </div>
 
         <div className="my-8 flex gap-10 max-md:flex-col items-center flex-row-reverse">
           <ProjectCard src="/screenshots/la-buca.png" alt="La Buca website" href="https://la-buca-italian-cafe.vercel.app/" />
           <div>
-            <h3>La Buca, Redesigned</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3><Link href="https://la-buca-italian-cafe.vercel.app/">La Buca Italian Resaraunt</Link></h3>
+            <p className="h3-sub">A modernization and reimagination of an existing site.</p>
+            <p>An innovative redesign of a local restaruant's website. La Buca's website includes menus, review, links to social sites, and directions using Google Maps. Created with Next.js and TailwindCSS, this site in an excellent example of high quality user experience. See the <Link href="https://labucaitaliancafe.com/">original website</Link> for comparison.</p>
           </div>
         </div>
 
