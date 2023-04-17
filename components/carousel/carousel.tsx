@@ -2,7 +2,7 @@ import CarouselItem from "./carouselItem";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-export type CarouselArr = [string, string, string, string, string, ...string[]]
+export type CarouselArr = [string, string, string, string, string, string, string, ...string[]]
 export type CarouselArrItem = { body: string }
 
 const Carousel = () => {
@@ -10,7 +10,7 @@ const Carousel = () => {
 
   const getArr = (centerIndex: number) => {
     const lastIndex = fullArr.length - 1
-    const start = centerIndex - 2;
+    const start = centerIndex - 4;
     const end = centerIndex + 2;
     // If start and end index fit within the scope of fullArr, retrun a slice
     if (!(end > lastIndex) && start >= 0) {
@@ -34,28 +34,27 @@ const Carousel = () => {
   useEffect(() => {
     let currentIndex = 0;
     const interval = setInterval(() => {
-      let nextIndex = currentIndex + 1;
-      if (nextIndex > fullArr.length - 1) nextIndex = 0;
+      let nextIndex = currentIndex - 1;
+      if (nextIndex < 0) nextIndex = fullArr.length - 1;
       currentIndex = nextIndex;
+      let newArr = getArr(nextIndex);
+      console.log(newArr.length);
       setCarouselArr(getArr(nextIndex));
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [])
 
   return (
-    <div className="relative h-48 overflow-x-hidden max-w-[800px] mx-auto">
+    <div className="relative h-48 overflow-hidden max-w-[800px] mx-auto flex gap-10 items-center justify-center">
       <div className="z-50 absolute top-0 bottom-0 left-0 w-28 bg-gradient-to-r from-white to-white/0" />
-      <motion.div
-        className="flex gap-5 lg:gap-10 justify-center items-center h-full"
-      >
-        <CarouselItem key="placeHolderItem" className="max-sm:hidden" body={fullArr[fullArr.indexOf(carouselArr[-1]) - 1]} index={10} />
+      <div className="flex justify-center items-center gap-10 relative right-56">
         {carouselArr.map((el, i) => {
           return (
-            <CarouselItem key={`carouselItem${i}`} body={el} index={i} />
+            <CarouselItem key={`carouselItem${el}`} body={el} index={i} />
           )
         })}
-      </motion.div>
+      </div>
       <div className="z-50 absolute top-0 bottom-0 right-0 w-28 bg-gradient-to-l from-white to-white/0" />
     </div>
   )
