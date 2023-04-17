@@ -38,4 +38,8 @@
   a:visited {
     @apply text-blue-900;
   }
+
+  a:hover {
+    @apply text-blue-500;
+  }
 }
