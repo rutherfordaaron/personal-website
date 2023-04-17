@@ -38,7 +38,6 @@ const Carousel = () => {
       if (nextIndex < 0) nextIndex = fullArr.length - 1;
       currentIndex = nextIndex;
       let newArr = getArr(nextIndex);
-      console.log(newArr.length);
       setCarouselArr(getArr(nextIndex));
     }, 4000);
 
