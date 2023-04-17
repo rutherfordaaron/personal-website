@@ -86,7 +86,7 @@ const CarouselItem = (props: { body: string, index: number }) => {
       transition={getTransition()}
       initial={getInitial()}
     >
-      <p className="drop-shadow-[0_1px_2px_rgb(255_255_255_/_0.5)] shadow-white">{body}</p>
+      <p className="drop-shadow-[0_1px_2px_rgb(255_255_255_/_0.5)] shadow-white indent-0">{body}</p>
     </motion.div>
   )
 }
