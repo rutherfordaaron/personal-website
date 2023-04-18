@@ -2,8 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Carousel from "../components/carousel/carousel";
 import ProjectCard from "../components/portfolio/projectCard";
+import CarouselSvg from "../components/carousel/carouselSvg";
 
 const Home = () => {
+  const carouselArr: JSX.Element[] = [
+    <CarouselSvg src="/stack-icons/mongodb.svg" alt="mongodb" />,
+    <CarouselSvg src="/stack-icons/nextjs.svg" alt="next.js" />,
+    <CarouselSvg src="/stack-icons/node.svg" alt="node.js" />,
+    <CarouselSvg src="/stack-icons/react.svg" alt="react.js" />,
+    <CarouselSvg src="/stack-icons/tailwind.svg" alt="tailwindCSS" />,
+    <CarouselSvg src="/stack-icons/typescript.svg" alt="typescript" />,
+  ]
+
   return (
     <article>
       {/* ---------- Landing Section ---------- */}
@@ -26,7 +36,20 @@ const Home = () => {
 
       {/* ---------- Tools Carousel ---------- */}
       <div className="relative bottom-4 md:bottom-12">
-        <Carousel />
+        <Carousel items={[
+          { element: <CarouselSvg src="/stack-icons/mongodb.svg" alt="mongodb logo" />, index: 0 },
+          { element: <CarouselSvg src="/stack-icons/nextjs.svg" alt="next.js logo" />, index: 1 },
+          { element: <CarouselSvg src="/stack-icons/node.svg" alt="node.js logo" />, index: 2 },
+          { element: <CarouselSvg src="/stack-icons/react.svg" alt="react.js logo" />, index: 3 },
+          { element: <CarouselSvg src="/stack-icons/tailwind.svg" alt="tailwind logo" />, index: 4 },
+          { element: <CarouselSvg src="/stack-icons/typescript.svg" alt="typescript logo" />, index: 5 },
+          { element: <CarouselSvg src="/stack-icons/mongodb.svg" alt="mongodb logo" />, index: 6 },
+          { element: <CarouselSvg src="/stack-icons/nextjs.svg" alt="next.js logo" />, index: 7 },
+          { element: <CarouselSvg src="/stack-icons/node.svg" alt="node.js logo" />, index: 8 },
+          { element: <CarouselSvg src="/stack-icons/react.svg" alt="react.js logo" />, index: 9 },
+          { element: <CarouselSvg src="/stack-icons/tailwind.svg" alt="tailwind logo" />, index: 10 },
+          { element: <CarouselSvg src="/stack-icons/typescript.svg" alt="typescript logo" />, index: 11 },
+        ]} />
       </div>
 
       {/* ---------- Projects Section ---------- */}

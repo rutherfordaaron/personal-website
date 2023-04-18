@@ -1,6 +1,6 @@
 import { Transition, motion, TargetAndTransition } from "framer-motion";
 
-const CarouselItem = (props: { body: string, index: number }) => {
+const CarouselItem = (props: { body: JSX.Element, index: number }) => {
   const { body, index } = props;
 
   const getStyle = () => {
@@ -86,7 +86,7 @@ const CarouselItem = (props: { body: string, index: number }) => {
       transition={getTransition()}
       initial={getInitial()}
     >
-      <p className="drop-shadow-[0_1px_2px_rgb(255_255_255_/_0.5)] shadow-white indent-0">{body}</p>
+      {body}
     </motion.div>
   )
 }
