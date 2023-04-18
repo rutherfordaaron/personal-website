@@ -5,15 +5,6 @@ import ProjectCard from "../components/portfolio/projectCard";
 import CarouselSvg from "../components/carousel/carouselSvg";
 
 const Home = () => {
-  const carouselArr: JSX.Element[] = [
-    <CarouselSvg src="/stack-icons/mongodb.svg" alt="mongodb" />,
-    <CarouselSvg src="/stack-icons/nextjs.svg" alt="next.js" />,
-    <CarouselSvg src="/stack-icons/node.svg" alt="node.js" />,
-    <CarouselSvg src="/stack-icons/react.svg" alt="react.js" />,
-    <CarouselSvg src="/stack-icons/tailwind.svg" alt="tailwindCSS" />,
-    <CarouselSvg src="/stack-icons/typescript.svg" alt="typescript" />,
-  ]
-
   return (
     <article>
       {/* ---------- Landing Section ---------- */}
