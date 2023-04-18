@@ -22,7 +22,7 @@ const Home = () => {
           </div>
         </div>
         {/* Intro */}
-        <p className="lg:w-96 lg:pb-24 relative bottom-10 lg:bottom-0">I am passionate about creating sites that are inspiring, intuitive, and innovative. I'm always adding new technologies and techniques to my repretoire to ensure my projects are the best that they can be. I also have a strong belief that everything should be accessible: from they way I write my code in a readable way for others, to the end result that the end-user experiences.</p>
+        <p className="lg:w-96 lg:pb-24 relative bottom-10 lg:bottom-0">I am passionate about creating sites that are inspiring, intuitive, and innovative. I&apos;m always adding new technologies and techniques to my repretoire to ensure my projects are the best that they can be. I also have a strong belief that everything should be accessible: from they way I write my code in a readable way for others, to the end result that the end-user experiences.</p>
       </section>
 
       {/* ---------- Tools Carousel ---------- */}
@@ -66,7 +66,7 @@ const Home = () => {
           githubHref="https://github.com/rutherfordaaron/la-buca-italian-cafe"
           title="La Buca Italian Restaraunt"
           subtitle="A modernization and reimagination of an existing site."
-          body={<p>An innovative redesign of a local restaruant's website. La Buca's website includes menus, review, links to social sites, and directions using Google Maps. Created with Next.js and TailwindCSS, this site in an excellent example of high quality user experience. See the <Link href="https://labucaitaliancafe.com/">original website</Link> for comparison.</p>}
+          body={<p>An innovative redesign of a local restaruant&apos;s website. La Buca&apos;s website includes menus, review, links to social sites, and directions using Google Maps. Created with Next.js and TailwindCSS, this site in an excellent example of high quality user experience. See the <Link href="https://labucaitaliancafe.com/">original website</Link> for comparison.</p>}
           reverse={true}
         />
 
