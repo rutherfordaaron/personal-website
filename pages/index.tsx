@@ -74,7 +74,7 @@ const Home = () => {
         <ProjectCard
           src="/screenshots/freelance.png"
           alt="freelance site screenshot"
-          href="https://rutherfordaaron.github.io/todo-app/"
+          href="https://freelance-site-beige.vercel.app/"
           githubHref="https://github.com/rutherfordaaron/freelance-site/"
           title="Freelance Site"
           subtitle="A site to hire me and my partner for small projects."
