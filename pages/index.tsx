@@ -101,7 +101,7 @@ const Home = () => {
           githubHref="https://github.com/rutherfordaaron/e-commerce-page/"
           title="Static E-Commerce Page"
           subtitle="A pixel-perfect creation from a given design."
-          body={<p>Built from a <Link href="https://frontendmentor.io">Frontend Mentor</Link> project, this static web page was created with pixel-perfect precision. Built using React, SCSS, and only a few given images - no boilerplate code was used.</p>}
+          body={<p>A demo page of a standard e-commerce site using images provided by <Link href="https://frontendmentor.io">Frontend Mentor</Link> and coded wiht React.js and SCSS. This site includes cart functionality, a shadow box display, and a stationary carousel.</p>}
         />
 
         {/* tip splitter */}
