@@ -44,6 +44,6 @@
   }
 
   .collage-item {
-    @apply min-w-[200px] h-[150px] bg-gray-200 shadow-lg border-2 border-gray-400 relative;
+    @apply min-w-[200px] h-[150px] bg-gray-200 shadow-lg border-2 border-gray-800 overflow-hidden relative;
   }
 }
