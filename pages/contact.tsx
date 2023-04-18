@@ -1,6 +1,5 @@
 import FormInput from "../components/formInput";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
@@ -45,28 +44,23 @@ const Contact = () => {
 
   return (
     <article>
-      <h1>Contact me</h1>
-
-      <p>Contact me text</p>
-
-      <p className="text-justify">I'll reach out to you within a day or so and let you know what kind of work goes into the project you're looking for as well as an estimated price for the whole project, and we'll go from there!</p>
-
-      <div>
-        <form onSubmit={e => e.preventDefault()} id="contact-me-form">
-          <div>
+      <h1 className="text-center">Contact Me</h1>
+      <div className="border border-black w-fit mx-auto mt-12">
+        <form onSubmit={e => e.preventDefault()} id="contact-me-form" className="flex flex-col justify-center items-center m-12 max-sm:mx-7">
+          <div className="flex justify-center items-center gap-8 mb-8 max-md:flex-col">
             <FormInput type="text" label="Name*" state={name} setState={setName} />
             <FormInput type="email" label="Email*" state={email} setState={setEmail} />
           </div>
           <FormInput type="textarea" label="Message*" state={message} setState={setMessage} />
           <button
             disabled={!valid}
-            className=""
+            className="border border-black mt-10 px-8 py-4 text-lg bg-gray-100 shadow-lg disabled:text-gray-400 disabled:shadow-none disabled:border-gray-300"
             onClick={e => { e.preventDefault; mail(); }}
           >
             Submit
             {loading ? <FontAwesomeIcon icon={faSpinner} className="ml-5 animate-spin" /> : ""}
           </button>
-          <div className={`${result ? "" : "hidden"}`}>
+          <div className={`${result ? "" : "hidden"} mt-8`}>
             {result}
           </div>
         </form>
