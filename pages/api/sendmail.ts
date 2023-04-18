@@ -12,14 +12,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
       let transporter = nodemailer.createTransport({
         //@ts-ignore
-        service: "gmail",
+        host: "smtp.ionos.com",
+        port: 587,
+        secure: false,
         auth: {
-          type: "OAuth2",
           user: process.env.MAIL_USERNAME,
-          pass: process.env.MAIL_PASSWORD,
-          clientId: process.env.OATUH_CLIENT_ID,
-          clientSecret: process.env.OAUTH_CLIENT_SECRET,
-          refreshToken: process.env.OAUTH_CLIENT_TOKEN
+          pass: process.env.MAIL_PASSWORD
         }
       })
 
@@ -43,7 +41,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       if (sendSuccess) {
         res.status(200).json({ success: true, message: "Message sent! I'll be in touch with you soon." });
       } else {
-        res.status(500).json({ success: false, message: `Something went wrong! Please try again. If it still doesn't work, reach out to me directly at contact@aaronrutherford.dev. ${error}` });
+        res.status(500).json({ success: false, message: `Something went wrong! Please try again or reach out to contact@aaronrutherford.dev. ${error}` });
       }
       break;
     default:
