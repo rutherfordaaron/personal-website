@@ -110,9 +110,9 @@ const Home = () => {
           alt="tip splitter project screenshot"
           href="https://rutherfordaaron.github.io/tip-calc/"
           githubHref="https://github.com/rutherfordaaron/tip-calc/"
-          title="Tip Splitter"
-          subtitle="Split the tip with this calculator."
-          body={<p>Built using React and CSS, use this simple app to split the bill between multiple people and calculate the tip.</p>}
+          title="Tip Splitting Calculator"
+          subtitle="A percentage calculator."
+          body={<p>A web application that calculates preset and custom percentages and divides among participants. This application has a strong visual hierarchy and uses input fields with hover and focus states.</p>}
           reverse={true}
         />
       </section>
