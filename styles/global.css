@@ -20,7 +20,7 @@
   }
 
   h3 {
-    @apply text-xl font-bold pb-4;
+    @apply text-xl font-bold pb-4 text-left;
   }
 
   .h3-sub {

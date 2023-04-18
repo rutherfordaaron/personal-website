@@ -54,7 +54,7 @@ const Home = () => {
           href="https://recipe-box-phi.vercel.app/"
           githubHref="https://github.com/rutherfordaaron/recipe-box"
           title="Recipe Box"
-          subtitle="Digitize your recipe book with Recipe Box."
+          subtitle="A social site for recipe sharing and creation."
           body={<p>Recipe Box is a full stack application created using Next.js and TailwindCSS with a custom built authentication API and the ability to store user data by leveraging MongoDB. A few of its features include: a rating system for public recipes, an internal search engine for finding the right recipes, options for making recipes public or private, and easy to navigate froms. Being a labor of love, Recipe Box is continuously being updated and improved upon.</p>}
         />
 
@@ -70,7 +70,30 @@ const Home = () => {
           reverse={true}
         />
 
-        {/* countries api */}
+        {/* freelance site */}
+        <ProjectCard
+          src="/screenshots/freelance.png"
+          alt="freelance site screenshot"
+          href="https://rutherfordaaron.github.io/todo-app/"
+          githubHref="https://github.com/rutherfordaaron/freelance-site/"
+          title="Freelance Site"
+          subtitle="A site to hire me and my partner for small projects."
+          body={<p>A freelance site for my partnership with designer Harmony Brooks, this site has a playful personality and includes custom-built SVGs and animations. Codded using Next.js, React, and TailwindCSS, this site is currently in the final stages of completion.</p>}
+        />
+
+        {/* rock paper scissors */}
+        <ProjectCard
+          src="/screenshots/rock-paper-scissors.png"
+          alt="rock paper scissors project screenshot"
+          href="https://rutherfordaaron.github.io/rock-paper-scissors-lizard-spock/"
+          githubHref="https://github.com/rutherfordaaron/rock-paper-scissors-lizard-spock"
+          title="An Expanded, Classic Game"
+          subtitle="An expanded version of the classic rock, paper, scissors game."
+          body={<p>An extended version of the classic Rock, Paper, Scissors game, this site uses a random number generator and logic statements to determine the winner and local storage to track and store your score across visits. This site has excellent CSS animations and was created using React and plain CSS.</p>}
+          reverse={true}
+        />
+
+        {/* e-commerce page */}
         <ProjectCard
           src="/screenshots/e-commerce.png"
           alt="static e-ommerce page"
@@ -81,36 +104,15 @@ const Home = () => {
           body={<p>Built from a <Link href="https://frontendmentor.io">Frontend Mentor</Link> project, this static web page was created with pixel-perfect precision. Built using React, SCSS, and only a few given images - no boilerplate code was used.</p>}
         />
 
-        {/* rock, paper, scissors */}
-        <ProjectCard
-          src="/screenshots/rock-paper-scissors.png"
-          alt="rock paper scissors project"
-          href="https://rutherfordaaron.github.io/rock-paper-scissors-lizard-spock/"
-          githubHref="https://github.com/rutherfordaaron/rock-paper-scissors-lizard-spock"
-          title="Rock, Paper, Scissors, Lizard, Spock"
-          subtitle="An expanded version of the classic game."
-          body={<p>Play against the computer as it randomly picks a symbol to put against you. This project was built with React and plain CSS, and shows off complex and well orchestrated CSS animations.</p>}
-          reverse={true}
-        />
-
+        {/* tip splitter */}
         <ProjectCard
           src="/screenshots/tip-calc.png"
-          alt="tip splitter project"
+          alt="tip splitter project screenshot"
           href="https://rutherfordaaron.github.io/tip-calc/"
           githubHref="https://github.com/rutherfordaaron/tip-calc/"
           title="Tip Splitter"
           subtitle="Split the tip with this calculator."
           body={<p>Built using React and CSS, use this simple app to split the bill between multiple people and calculate the tip.</p>}
-        />
-
-        <ProjectCard
-          src="/screenshots/todo.png"
-          alt="todo project"
-          href="https://rutherfordaaron.github.io/todo-app/"
-          githubHref="https://github.com/rutherfordaaron/todo-app/"
-          title="Todo"
-          subtitle="A simple todo app."
-          body={<p>Track and manage tasks using this simple todo app.</p>}
           reverse={true}
         />
       </section>
