@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html {
+    @apply font-semibold bg-accent-100;
+    --primary: hsl(199, 50%, 85%);
+    --secondary: hsl(199, 45%, 80%);
+    --third: hsl(199, 40%, 75%);
+    --fourth: hsl(199, 35%, 70%);
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-bold pb-4 text-left;
+  }
+
+  .h3-sub {
+    @apply indent-0 text-gray-500 italic text-sm relative bottom-4
+  }
+
+  p {
+    @apply indent-10;
+  }
+
+  a {
+    @apply underline;
+    color: theme('colors.accent.800');
+  }
+
+  a:visited {
+    color: theme('colors.accent.800');
+  }
+
+  a:hover {
+    color: theme('colors.accent.600');
+  }
+
+  .collage-item {
+    @apply min-w-[200px] h-[150px] bg-gray-200 shadow-lg border-2 border-gray-800 overflow-hidden relative;
+  }
+}
