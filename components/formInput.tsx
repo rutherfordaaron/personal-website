@@ -1,20 +1,20 @@
 import { useState } from "react";
 
 const FormInput = (props: { label: string, type: string, state: string, setState: Function }) => {
-  const input = "bg-gray-100 transition-all border focus:outline-none focus:border-gray-600 px-1 min-w-[250px] py-3";
-  const activeInput = "border-gray-700";
-  const inactiveInput = "border-gray-900";
+  const input = "bg-accent-100 transition-all border focus:outline-none focus:border-accent-600 px-1 min-w-[250px] py-3";
+  const activeInput = "border-accent-700";
+  const inactiveInput = "border-accent-900";
 
   const inputContainer = "relative";
 
   const inactiveLabel = "bottom-[14px] left-[5px]";
-  const activeLabel = "text-xs bottom-[54px] left-0 text-gray-600";
+  const activeLabel = "text-xs bottom-[54px] left-0 text-accent-600";
   const label = "transition-all absolute"
 
-  const textArea = "bg-gray-100 border px-2 py-4 focus:outline-none focus:border-gray-600 transition-all min-w-[250px] min-h-[250px] md:w-[550px] resize-none"
+  const textArea = "bg-accent-100 border px-2 py-4 focus:outline-none focus:border-accent-600 transition-all min-w-[250px] min-h-[250px] md:w-[550px] resize-none"
 
-  const inactiveTextAreaLabel = "top-[24px] left-[10px] border-gray-900"
-  const activeTextAreaLabel = "text-xs top-[-15px] left-[0px] text-gray-700"
+  const inactiveTextAreaLabel = "top-[24px] left-[10px] border-accent-900"
+  const activeTextAreaLabel = "text-xs top-[-15px] left-[0px] text-accent-700"
 
   if (props.type !== "textarea") {
     return (

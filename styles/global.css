@@ -4,11 +4,11 @@
 
 @layer components {
   html {
-    @apply font-semibold;
-    --primary: rgba(209, 213, 219);
-    --secondary: rgba(156, 163, 175);
-    --third: rgba(107, 114, 128);
-    --fourth: rgba(75, 85, 99);
+    @apply font-semibold bg-accent-100;
+    --primary: hsl(199, 50%, 85%);
+    --secondary: hsl(199, 45%, 80%);
+    --third: hsl(199, 40%, 75%);
+    --fourth: hsl(199, 35%, 70%);
   }
 
   h1 {
@@ -32,15 +32,16 @@
   }
 
   a {
-    @apply underline text-blue-800;
+    @apply underline;
+    color: theme('colors.accent.800');
   }
 
   a:visited {
-    @apply text-blue-900;
+    color: theme('colors.accent.800');
   }
 
   a:hover {
-    @apply text-blue-500;
+    color: theme('colors.accent.600');
   }
 
   .collage-item {

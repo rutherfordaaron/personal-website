@@ -13,10 +13,10 @@ const Home = () => {
         <div className="relative flex flex-col justify-center items-center gap-0 md:mt-10">
           {/* Headshot Image */}
           <div className="w-56 h-72 md:w-72 md:h-96 shadow-md bg-gray-600 relative right-8 md:right-24">
-            <Image src="/headshot.jpg" alt="Aaron Rutherford Headshot" layout="fill" className="filter grayscale-[50%]" />
+            <Image src="/headshot.jpg" alt="Aaron Rutherford Headshot" layout="fill" />
           </div>
           {/* Name Card */}
-          <div className="relative bg-gray-200 px-8 py-6 md:px-12 md:py-8 bottom-36 md:bottom-48 -right-8 md:-right-10 shadow-lg z-40">
+          <div className="relative bg-accent-200 px-8 py-6 md:px-12 md:py-8 bottom-36 md:bottom-48 -right-8 md:-right-10 shadow-lg z-40">
             <h1 className="text-xl md:text-2xl">Aaron Rutherford</h1>
             <p className="text-md md:text-xl text-gray-600 italic indent-0">Fullstack Developer</p>
           </div>

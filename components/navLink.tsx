@@ -16,7 +16,7 @@ const NavLink = (props: { href: string, text: string }) => {
       <Link
         legacyBehavior={false}
         href={props.href}
-        className={`${router.asPath == props.href ? "text-black visited:text-black" : "text-gray-500 visited:text-gray-500"} transition-all hover:text-slate-800 no-underline`}
+        className={`${router.asPath == props.href ? "text-black visited:text-black" : "text-accent-500 visited:text-accent-500"} transition-all hover:text-accent-700 no-underline`}
       >
         {props.text}
       </Link>

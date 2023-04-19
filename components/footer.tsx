@@ -6,7 +6,7 @@ const footerLink = "text-black hover:text-blue-900 visited:text-black";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 p-4">
+    <footer className="bg-accent-200 p-4">
       <div className="max-w-[1200px] mx-auto w-full md:flex items-center justify-between">
         <div className="flex gap-6 text-lg">
           <Link href="/" legacyBehavior={false} className={footerLink}>Home</Link>
