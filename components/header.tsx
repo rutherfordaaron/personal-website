@@ -86,7 +86,7 @@ const Header = () => {
           variants={menuVariants}
           initial="inactive"
           animate={showMenu ? "active" : "exit"}
-          className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-gray-300 max-sm:shadow-2xl max-sm:p-4 max-sm:pr-16"
+          className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-accent-200 max-sm:shadow-2xl max-sm:p-4 max-sm:pr-16"
           onClick={e => { if (window.screen.width <= 767) setShowMenu(!showMenu) }}
         >
           {/* Navigation links */}

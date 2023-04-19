@@ -16,15 +16,15 @@
   }
 
   h2 {
-    @apply text-2xl font-semibold;
+    @apply text-2xl text-accent-800 font-semibold;
   }
 
   h3 {
-    @apply text-xl font-bold pb-4 text-left;
+    @apply text-xl text-accent-700 font-bold pb-4 text-left;
   }
 
   .h3-sub {
-    @apply indent-0 text-gray-500 italic text-sm relative bottom-4
+    @apply indent-0 text-accent-600 italic text-sm relative bottom-4
   }
 
   p {
@@ -45,6 +45,6 @@
   }
 
   .collage-item {
-    @apply min-w-[200px] h-[150px] bg-gray-200 shadow-lg border-2 border-gray-800 overflow-hidden relative;
+    @apply min-w-[200px] h-[150px] bg-accent-200 shadow-lg border-2 border-gray-800 overflow-hidden relative;
   }
 }
