@@ -12,7 +12,7 @@ const ProjectCard = (props: { src: string, alt: string, href: string, githubHref
         <h3 className={reverse ? "md:text-right" : ""}><Link href={href}>{title}</Link></h3>
         <p className={`h3-sub ${reverse ? "md:text-right" : ""}`}>{subtitle}</p>
         {body}
-        <Link href={githubHref} legacyBehavior={false}><p className={`indent-0 pt-2 ${reverse ? "text-right" : ""}`}>See it on GitHub. <FontAwesomeIcon className="opacity-75" icon={faExternalLink} /></p></Link>
+        <Link href={githubHref} legacyBehavior={false}><p className={`indent-0 pt-2 flex items-center gap-2 ${reverse ? "text-right" : ""}`}>See it on GitHub. <div className="w-[10px] h-[10px] overflow-hidden"><FontAwesomeIcon icon={faExternalLink} /></div></p></Link>
       </div>
     </div>
   )

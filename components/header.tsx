@@ -86,7 +86,7 @@ const Header = () => {
           variants={menuVariants}
           initial="inactive"
           animate={showMenu ? "active" : "exit"}
-          className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-accent-200 max-sm:shadow-2xl max-sm:p-4 max-sm:pr-16"
+          className="flex gap-4 justify-center max-sm:fixed right-1 top-1 max-sm:flex-col max-sm:bg-accent-200 max-sm:shadow-2xl max-sm:py-8 max-sm:pl-10 max-sm:pr-20"
           onClick={e => { if (window.screen.width <= 767) setShowMenu(!showMenu) }}
         >
           {/* Navigation links */}
@@ -97,7 +97,7 @@ const Header = () => {
           {/* Navigation close button (mobile only) */}
           <button
             onClick={e => setShowMenu(false)}
-            className="md:hidden absolute top-2 right-4 text-lg"
+            className="md:hidden absolute top-5 right-5 text-lg w-4 h-4 text-accent-500"
           >
             <FontAwesomeIcon icon={faX} />
           </button>
@@ -106,7 +106,7 @@ const Header = () => {
         {/* ---------- MOBILE NAVIGATION MENU TOGGLE (MOBILE ONLY) ---------- */}
         <button
           onClick={e => setShowMenu(!showMenu)}
-          className="md:hidden"
+          className="md:hidden w-5 h-5 text-accent-500"
         >
           <FontAwesomeIcon icon={faBars} />
         </button>

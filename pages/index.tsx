@@ -3,10 +3,17 @@ import Link from "next/link";
 import Carousel from "../components/carousel/carousel";
 import ProjectCard from "../components/portfolio/projectCard";
 import CarouselSvg from "../components/carousel/carouselSvg";
+import Head from "next/head";
+import CustomHead from "../components/customHead";
 
 const Home = () => {
   return (
     <article>
+      <CustomHead
+        title="Aaron Rutherford | Fullstack Developer"
+        description="Protfolio of Aaron Rutherford, fullstack developer specializing in Next.js, React, Tailwind, and MongoDB."
+        keywords="portfolio, fullstack, next.js, next, react, react.js, mongodb, tailwind, tailwindCSS, aaron rutherford, hire"
+      />
       {/* ---------- Landing Section ---------- */}
       <section className="lg:grid lg:px-44 grid-cols-2 justify-center items-center gap-12">
         {/* Name Card & Image Wrapper */}

@@ -2,6 +2,7 @@ import FormInput from "../components/formInput";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import CustomHead from "../components/customHead";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -44,6 +45,11 @@ const Contact = () => {
 
   return (
     <article>
+      <CustomHead
+        title="Contact | Aaron Rutherford | Fullstack Developer"
+        description="Contact Aaron Rutherford, fullstack developer specializing in Next.js, React, Tailwind, and MongoDB."
+        keywords="portfolio, fullstack, next.js, next, react, react.js, mongodb, tailwind, tailwindCSS, aaron rutherford, hire, contact"
+      />
       <h1 className="text-center">Contact Me</h1>
       <div className="border border-black w-fit mx-auto mt-12 bg-accent-200">
         <form onSubmit={e => e.preventDefault()} id="contact-me-form" className="flex flex-col justify-center items-center m-12 max-sm:mx-7">

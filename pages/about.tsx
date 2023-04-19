@@ -1,10 +1,17 @@
 import Link from "next/link";
 import AboutMeImage from "../components/aboutMeImage";
 import Image from "next/image";
+import CustomHead from "../components/customHead";
 
 const About = () => {
   return (
     <article>
+      <CustomHead
+        title="About Me | Aaron Rutherford | Fullstack Developer"
+        description="About Aaron Rutherford, fullstack developer specializing in Next.js, React, Tailwind, and MongoDB."
+        keywords="portfolio, fullstack, next.js, next, react, react.js, mongodb, tailwind, tailwindCSS, aaron rutherford, hire, about"
+      />
+
       <h1 className="mb-16 text-[48px] relative text-center">About Me</h1>
       <section className="flex max-lg:flex-col gap-12 justify-center items-center mt-10">
         <div className="relative min-w-[300px] h-[300px] md:min-w-[500px] md:h-[500px] bg-accent-200 shadow-xl">
