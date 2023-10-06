@@ -54,6 +54,18 @@ const Home = () => {
       <section id="portfolio">
         <h2 className="text-3xl font-bold border-b-2 pb-2 border-accent-300">Portfolio</h2>
         {/* Portfolio items */}
+        {/* Guildsmen project */}
+        <ProjectCard
+          src="/screenshots/guildsmen.png"
+          alt="guildsmen project"
+          href="https://guildsmen-ttrpg.com/"
+          githubHref="https://github.com/rutherfordaaron/guildsmen-website"
+          title="Guildsmen"
+          subtitle="My primary passion project"
+          reverse={true}
+          body={<p>This site is a fullstack website that leverages the latest version of Next.js, React, MongoDB, and TailwindCSS. This project is the culmination of a couple years of work creating a tabletop role play game called Guildsmen. It's my current passion project and has really pushed my web development skills. It is still a work in progress, but the core of the game is complete.</p>}
+        />
+
         {/* recipe box */}
         <ProjectCard
           src="/screenshots/recipe-box.png"
@@ -85,7 +97,7 @@ const Home = () => {
           githubHref="https://github.com/rutherfordaaron/freelance-site/"
           title="Freelance Site"
           subtitle="A site to hire me and my partner for small projects."
-          body={<p>A freelance site for my partnership with designer Harmony Brooks, this site has a playful personality and includes custom-built SVGs and animations. Codded using Next.js, React, and TailwindCSS, this site is currently in the final stages of completion.</p>}
+          body={<p>A freelance site for my partnership with designer Harmony Brooks, this site has a playful personality and includes custom-built SVGs and animations. Codded using Next.js, React, and TailwindCSS, this site is currently a work in progress.</p>}
         />
 
         {/* rock paper scissors */}
